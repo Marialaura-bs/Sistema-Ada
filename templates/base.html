@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="" alt="">
+        </div>
+        <div>
+            <a href="{{url_for('conheca')}}">Conheça-nos</a>
+            <a href="{{url_for('nossos_trabalhos')}}">Nossos Trabalhos</a>
+            <a href="{{url_for('lovelace')}}">Lovelace</a>
+            <a href="{{url_for('dados')}}">Dados</a>
+        </div>
+        <div>
+            <a href="{{url_for('login')}}">Rede de apoio</a>
+        </div>
+    </header>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
