@@ -1,2 +1,17 @@
 body {background-color: #474F62;}
 
+.form-geral{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.form{
+    background: rgba(59, 65, 81, 0.60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 80%;
+    flex-direction: column;
+}

@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-    <form action="{{url_for('rede_de_apoio')}}" method="post">
+<div class='form-geral'>
+    <form class="form" action="{{url_for('rede_de_apoio')}}" method="post">
+        <h1>Faça seu Login</h1>
         <label for="">Usuário</label><br/>
         <input type="text" name="usuario"><br/>
         <label>Senha</label><br/>
         <input type="password" name="senha"><br/>
         <button type="submit">Entrar</button>
+        <p>Não tem conta? <a href="{{url_for('cadastro')}}">Faça seu cadastro</a></p>
     </form>
-    <p>Não tem conta? <a href="{{url_for('cadastro')}}">Faça seu cadastro</a></p>
+</div>
 {%endblock%}
