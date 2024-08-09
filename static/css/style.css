@@ -15,3 +15,21 @@ body {background-color: #474F62;}
     height: 80%;
     flex-direction: column;
 }
+
+.h1-form{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    border-bottom: 2px solid #FED6DF;
+    padding-bottom: 7px;
+}
+
+.fonte-form{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

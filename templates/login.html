@@ -3,13 +3,15 @@
 {% block conteudo %}
 <div class='form-geral'>
     <form class="form" action="{{url_for('rede_de_apoio')}}" method="post">
-        <h1>Faça seu Login</h1>
-        <label for="">Usuário</label><br/>
-        <input type="text" name="usuario"><br/>
-        <label>Senha</label><br/>
-        <input type="password" name="senha"><br/>
-        <button type="submit">Entrar</button>
-        <p>Não tem conta? <a href="{{url_for('cadastro')}}">Faça seu cadastro</a></p>
+        <h1 class="h1-form">Faça seu Login</h1>
+        <div class="fonte-form">
+            <label for="">Usuário:</label><br/>
+            <input type="text" name="usuario"><br/>
+            <label>Senha:</label><br/>
+            <input type="password" name="senha"><br/>
+            <button type="submit">Entrar</button>
+            <p>Não tem conta? <a href="{{url_for('cadastro')}}">Faça seu cadastro</a></p>
+        </div>
     </form>
 </div>
 {%endblock%}
