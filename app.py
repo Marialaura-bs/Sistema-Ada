@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
+from flask import flash, redirect
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'sua-palavra-secreta'
 
 @app.route ('/')
 def index():
@@ -26,6 +28,7 @@ def dados():
 def login():
     return render_template('login.html')
 
+    
 @app.route('/rede_de_apoio', methods=['post'])
 def rede_de_apoio():
     usuario = request.form["usuario"]
@@ -33,8 +36,17 @@ def rede_de_apoio():
     if usuario== "alba.lopes" and senha=="12345":
         return render_template('rede_de_apoio.html', usuario=usuario)
     else:
-        return "Usuário ou senha incorretos"
+        flash("Login ou senha incorretos")
+        return redirect("/login")
+    
     
 @app.route('/cadastro')
 def cadastro():
     return render_template("cadastro.html")
+
+lista_mensagens = []
+@app.route('/mensagens', methods=['post', 'get'])
+def mensagens():
+    mensagens = request.form['mensagens']
+    lista_mensagens.append(mensagens)
+    return render_template('rede_de_apoio.html', mensagens=mensagens, lista=lista_mensagens)
