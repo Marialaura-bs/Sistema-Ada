@@ -1,6 +1,23 @@
-body {background-color: #474F62;}
+body{background-color: #474F62;
+    margin: 0;
+    padding: 0;}
 
-.form-geral{
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #343B4D;
+    height: 60%;
+    border-bottom: 2px solid #FED6DF;
+}
+
+.logo_ada img{
+    height: 40px;
+    margin-left: 30px; 
+    margin-right: 20px;
+}
+
+.form_geral{
     justify-content: center;
     align-items: center;
     display: flex;
@@ -18,7 +35,7 @@ body {background-color: #474F62;}
     flex-direction: column;
 }
 
-.titulo-form{
+.titulo_form{
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -27,7 +44,7 @@ body {background-color: #474F62;}
     padding-bottom: 7px;
 }
 
-.fonte-form{
+.fonte_form{
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -58,3 +75,5 @@ input{
     border-radius: 10px;
     border: none;
 }
+
+
