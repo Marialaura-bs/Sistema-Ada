@@ -1,9 +1,14 @@
-body{background-color: #474F62;
+body{
+    background-color: #474F62;
     margin: 0;
     padding: 0;
 }
 
+/*BASE.HTML*/
 header{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600px;
+    font-style: normal;
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -16,6 +21,7 @@ nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    align-items: center;
     display: flex;
     justify-content: center;
 }
@@ -27,16 +33,53 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
+    font-size: 13px;
 }
 
 .logo_ada img{
     height: 35px;
     margin-left: 30px; 
     margin-right: 20px;
+    display: flex;
+    align-items: center;
 }
 
+.rede_de_apoio{
+    padding: 6px 10px;
+    font-size: 13px;
+    text-align: center;
+    background-color: #FED6DF;
+    border: none;
+    border-radius: 10px;
+    margin-left: 20px; 
+    margin-right: 50px;
+}
+
+.rede_de_apoio a{
+    text-decoration: none;
+    color: #474F62;
+}
+
+.footer{
+    background-color: #343B4D;
+    height: 63px;
+    display: flex;
+    border-top: 2px solid #FED6DF;
+    width: 1440px;
+    
+}
+
+.logoif{
+    height: 35px;
+    margin-right: 20px;
+}
+
+.logoinsta{
+    height: 35px;
+    margin-left: 20px;
+}
+
+/*LOGIN.HTML*/
 .form_geral{
     justify-content: center;
     align-items: center;
