@@ -65,8 +65,20 @@ nav ul li a {
     height: 63px;
     display: flex;
     border-top: 2px solid #FED6DF;
+    width: 1440px;
     
 }
+
+.logoif{
+    height: 35px;
+    margin-right: 20px;
+}
+
+.logoinsta{
+    height: 35px;
+    margin-left: 20px;
+}
+
 /*LOGIN.HTML*/
 .form_geral{
     justify-content: center;
