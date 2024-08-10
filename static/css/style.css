@@ -3,7 +3,11 @@ body{background-color: #474F62;
     padding: 0;
 }
 
+/*BASE.HTML*/
 header{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -27,14 +31,29 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
+    font-size: 14px;
 }
 
 .logo_ada img{
     height: 35px;
     margin-left: 30px; 
     margin-right: 20px;
+}
+
+.rede_de_apoio{
+    padding: 6px 10px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #FED6DF;
+    border: none;
+    border-radius: 10px;
+    margin-left: 20px; 
+    margin-right: 50px;
+}
+
+.rede_de_apoio a{
+    text-decoration: none;
+    color: #474F62;
 }
 
 .form_geral{
