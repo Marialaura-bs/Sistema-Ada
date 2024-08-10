@@ -14,12 +14,16 @@
         <div class="logo_ada">
             <img src="/static/img/logo_ada.png" alt="">
         </div>
-        <div>
-            <a href="{{url_for('conheca')}}">Conheça-nos</a>
-            <a href="{{url_for('nossos_trabalhos')}}">Nossos Trabalhos</a>
-            <a href="{{url_for('lovelace')}}">Lovelace</a>
-            <a href="{{url_for('dados')}}">Dados</a>
-        </div>
+
+        <nav>
+            <ul>
+                <li><a href="{{url_for('conheca')}}">Conheça-nos</a></li>
+                <li><a href="{{url_for('nossos_trabalhos')}}">Nossos Trabalhos</a></li>
+                <li><a href="{{url_for('lovelace')}}">Lovelace</a></li>
+                <li><a href="{{url_for('dados')}}">Dados</a></li>
+            </ul>    
+        </nav>
+              
         <div>
             <a href="{{url_for('login')}}">Rede de apoio</a>
         </div>

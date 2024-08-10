@@ -1,18 +1,38 @@
 body{background-color: #474F62;
     margin: 0;
-    padding: 0;}
+    padding: 0;
+}
 
 header{
     display: flex;
     align-items: center;
     justify-content: space-between; 
     background-color: #343B4D;
-    height: 60%;
+    height: 50px;
     border-bottom: 2px solid #FED6DF;
 }
 
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
 .logo_ada img{
-    height: 40px;
+    height: 35px;
     margin-left: 30px; 
     margin-right: 20px;
 }
