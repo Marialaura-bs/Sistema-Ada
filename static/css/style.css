@@ -151,4 +151,17 @@ input{
     border: none;
 }
 
+/*CONHECA-NOS.HTML*/
 
+.equipetitle{
+    justify-content: center;
+    color: #FFFFFF;
+    
+}
+.conhecaequipe{
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 35px;
+    justify-content: center;
+}
