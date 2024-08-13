@@ -154,9 +154,13 @@ input{
 /*CONHECA-NOS.HTML*/
 
 .equipetitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    color: #FFFFFF;
-    
+    text-align: center;
+    margin: 0 auto;
+
 }
 .conhecaequipe{
     font-family: "Poppins";
@@ -164,4 +168,13 @@ input{
     font-weight: bolder;
     font-size: 35px;
     justify-content: center;
+    color: #FFFFFF;
+}
+
+.subconhecaequipe{
+    font-family: "poppins";
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 22px;
+    color: #FED6DF;
 }
