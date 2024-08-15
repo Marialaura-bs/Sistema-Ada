@@ -12,6 +12,51 @@ body{
     background-image: linear-gradient(120deg, #343B4D, #1F232D )
 }
 
+/*INDEX.HTML*/
+.texto_index{
+    display: inline-block;
+    margin: 0 auto; 
+    margin-left: 130px; 
+    margin-top: 70px;
+    border-left: 2px solid #FED6DF; 
+    padding-left: 30px;
+}
+
+.texto_index h1{
+    margin-bottom: 5px;
+    margin-top: 4px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.texto_index h1 img{
+    width: 75px;
+    height: auto;
+}
+
+.texto_index h2{
+    color: #FED6DF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.texto_index p{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.img_gradiente{
+    
+}
+
 /*BASE.HTML*/
 header{
     font-family: "Inter";
@@ -152,7 +197,6 @@ input{
 }
 
 /*CONHECA-NOS.HTML*/
-
 .titulogeral{
     display: flex;
     flex-direction: column;
@@ -160,21 +204,23 @@ input{
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-
+    margin: 15px 0 0;
 }
 .titulo{
     font-family: "Poppins";
     font-style: normal;
     font-weight: bolder;
-    font-size: 35px;
+    font-size: 25px;
     justify-content: center;
     color: #FFFFFF;
+    margin-bottom: 0;
 }
 
 .subtitulo{
     font-family: "poppins";
     font-style: italic;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 15px;
     color: #FED6DF;
+    margin-top: 1px;
 }
