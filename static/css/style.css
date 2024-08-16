@@ -229,56 +229,96 @@ input{
 /*CONHECA.HTML*/
 .container_equipe{
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center; 
     align-items: center;
     padding: 20px; 
-    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se necessário */
-    gap: 35px; /* Espaço entre os cards */
-
+    gap: 35px;
 }
 
 .card{
-    text-align: center;
     background: #3B4151;
     padding: 50px; 
     border-radius: 20px;
     width: 120px;
     height: 70px;
     display: flex;
+    text-align: center;
     flex-direction: column; 
-    justify-content: center; 
+    justify-content: center;
+    align-items: center;
 }
 
 .card h4{
-    margin: 0;
-    white-space: nowrap;
+    margin: 14px;
+    margin-bottom: 5px;
     color: #FFF;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .card p{
+    margin: 0;
+    margin-top: 0;
     color: #FED6DF;
-    text-align: center;
     font-family: Inter;
     font-size: 10px;
     font-style: normal;
     font-weight: 300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0; /* Remove a margem padrão */
-    padding: 2px 0; 
+    text-align: center;
 }
 
 .card img{
     width: 60px; 
     height: 60px; 
-    border-radius: 50%; 
-    margin: 0 auto 0 auto;
+    border-radius: 50%;
+    margin-top: 0;
+    text-align: center;
+}
+
+.titulo_conheca_pt2{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+}
+
+.container_depoimentos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px; 
+}
+
+.card_dp{
+    background: #3B4151;
+    border-radius: 20px;
+    width: 992px;
+    height: 180px;
+}
+
+.card_dp h4{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.card_dp p{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 200;
 }
