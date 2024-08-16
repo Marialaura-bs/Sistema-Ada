@@ -54,7 +54,7 @@ body{
 }
 
 .img_gradiente{
-    
+
 }
 
 /*BASE.HTML*/
@@ -113,6 +113,7 @@ nav ul li a {
     color: #474F62;
 }
 
+/*FOOTERRR*/
 .rodape{
     background-color: #343B4D;
     height: 63px;
@@ -196,7 +197,7 @@ input{
     border: none;
 }
 
-/*CONHECA-NOS.HTML*/
+/*GERAL-ROTAS*/
 .titulogeral{
     display: flex;
     flex-direction: column;
@@ -223,4 +224,56 @@ input{
     font-size: 15px;
     color: #FED6DF;
     margin-top: 1px;
+}
+
+/*CONHECA.HTML*/
+.container_equipe{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    padding: 20px; 
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se necessário */
+    gap: 35px; /* Espaço entre os cards */
+
+}
+
+.card{
+    text-align: center;
+    background: #3B4151;
+    padding: 50px; 
+    border-radius: 15px;
+    width: 120px;
+    height: 70px;
+}
+
+.card h4{
+    margin: 0;
+    white-space: nowrap;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.card p{
+    margin: 0;
+    color: #FED6DF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.card img{
+    margin: 0;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
