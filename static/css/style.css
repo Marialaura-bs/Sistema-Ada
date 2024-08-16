@@ -241,9 +241,12 @@ input{
     text-align: center;
     background: #3B4151;
     padding: 50px; 
-    border-radius: 15px;
+    border-radius: 20px;
     width: 120px;
     height: 70px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
 }
 
 .card h4{
@@ -254,26 +257,28 @@ input{
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card p{
-    margin: 0;
     color: #FED6DF;
     text-align: center;
     font-family: Inter;
     font-size: 10px;
     font-style: normal;
     font-weight: 300;
-}
-
-.card img{
-    margin: 0;
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
-    overflow: hidden; 
-    margin: 0 auto; 
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0; /* Remove a margem padrão */
+    padding: 2px 0; 
+}
+
+.card img{
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    margin: 0 auto 0 auto;
 }
