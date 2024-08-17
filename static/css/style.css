@@ -383,8 +383,8 @@ input{
 }
 
 .foto-item img{
-    width: 350px; 
-    height: auto; 
+    width: 440px;
+    height: 300px;
 }
 
 .foto-item p{
@@ -398,10 +398,50 @@ input{
 }
 
 .titulo_materiaisAP{
+    margin-top: 60px;
+    margin-bottom: 50px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+}
+
+.section_materiais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.materiaisAP{
+    background: #3B4151;
+    border-radius: 25px;
+    width: 920px;
+    height: 200px;
+    border: 1px solid #FED6DF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.bloco_materiais1{
+    margin-right: 120px;
+}
+
+.bloco_materiais1 a, 
+.bloco_materiais2 a {
     color: #FFF;
     font-family: Inter;
-    font-size: 25px;
+    font-size: 10px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
+    text-decoration: none;
 }
+
+
 /*REDE_DE_APOIO.HTML*/
