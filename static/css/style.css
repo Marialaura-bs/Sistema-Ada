@@ -335,3 +335,15 @@ input{
 .card_dp:last-of-type {
     margin-bottom: 90px; /* Espaço abaixo do último card */
 }
+
+/*NOSSOS_TRABALHOS.HTML*/
+.container_fotosNS{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre as imagens */
+    justify-content: center;
+}
+
+.fotosNS{
+    width: 80px;
+}
