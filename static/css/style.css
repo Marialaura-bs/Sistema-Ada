@@ -1,5 +1,8 @@
 html{
     height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body{
@@ -54,9 +57,6 @@ body{
     font-weight: 400;
 }
 
-.img_gradiente{
-
-}
 
 /*BASE.HTML*/
 header{
@@ -115,8 +115,8 @@ nav ul li a {
 }
 
 /*FOOTERRR*/
-.rodape{
-    padding: 10px 0;
+/*.rodape{
+    padding: 12px 0;
     background-color: #343B4D;
     display: flex;
     border-top: 2px solid #FED6DF;
@@ -136,6 +136,27 @@ nav ul li a {
     height: 35px;
     margin-left: 20px;
     margin-right: 30px;
+}*/
+
+footer {
+    background-color: #343B4D; /* Cor de fundo do footer */
+    border-top:2px solid #FED6DF;
+    padding: 12px;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-esquerda, .logo-direita {
+    height: 35px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 /*LOGIN.HTML*/
