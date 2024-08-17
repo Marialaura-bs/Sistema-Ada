@@ -355,16 +355,53 @@ input{
 }
 
 .card_dp:last-of-type {
-    margin-bottom: 90px; /* Espaço abaixo do último card */
+    margin-bottom: 90px; 
 }
 
 /*NOSSOS_TRABALHOS.HTML*/
 .container_fotosNS{
-    
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; /* Organiza as linhas em uma coluna */
+    gap: 20px; /* Espaçamento entre as linhas de fotos */
+    align-items: center; /* Alinha horizontalmente no centro */
 }
 
-.fotosNS{
-
+.fotos_linha1{
+    margin-bottom: 20px;
 }
 
+.fotos_linha1, .fotos_linha2{
+    display: flex; 
+    gap: 45px; /* Espaçamento entre itens na mesma linha */
+    justify-content: center; /* Alinha horizontalmente no centro */
+}
+
+/* Item da foto (imagem + descrição) */
+.foto-item{
+    text-align: center; /* Centraliza o texto abaixo da imagem */
+}
+
+.foto-item img{
+    width: 350px; 
+    height: auto; 
+}
+
+.foto-item p{
+    color: #FED6DF;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 200;
+    margin: 0; 
+    padding-top: 10px; /* Espaçamento entre a imagem e a descrição */
+}
+
+.titulo_materiaisAP{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+}
 /*REDE_DE_APOIO.HTML*/
