@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from flask import flash, redirect
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'sua-palavra-secreta'
+app.config['SECRET_KEY'] = 'ada'
 
 @app.route ('/')
 def index():
@@ -33,10 +33,10 @@ def login():
 def rede_de_apoio():
     usuario = request.form["usuario"]
     senha = request.form["senha"]
-    if usuario== "alba.lopes" and senha=="12345":
+    if usuario== "alba" and senha=="1234":
         return render_template('rede_de_apoio.html', usuario=usuario)
     else:
-        flash("Login ou senha incorretos")
+        flash("Login ou senha incorretos", 'danger')
         return redirect("/login")
     
     

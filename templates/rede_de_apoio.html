@@ -1,12 +1,23 @@
 {% extends 'base.html' %}
 
     {% block conteudo %}
-    <h1>Compartilhe sua experiência na área STEM e incentive outras mulheres.</h1>
-    <form action="{{url_for('mensagens')}}" method="post">
-        <input type="text" id="mensagens" name="mensagens" placeholder="Fale conosco">
-        <button type="submit">Enviar</button>
-    </form>
+    <section class="titulogeral">
+        <h1 class="titulo">Rede de apoio</h1>
+        <p class="subtitulo">Compartilhe sua experiência na área STEM e incentive outras mulheres.</p>
+    </section>
+    <section>
+        <form action="{{url_for('mensagens')}}" method="post">
+            <input type="text" id="mensagens" name="mensagens" placeholder="Fale conosco"><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
     {% for i in lista %}
-			<li> {{i}} </li>
-		{% endfor %}
+    <ul>
+        <li class="card">
+            <h4>{{usuario}}:</h4>
+            <p>{{i}}</p> 
+        </li>
+    </ul>
+	{% endfor %}
     {%endblock%}
