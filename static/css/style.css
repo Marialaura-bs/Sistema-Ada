@@ -338,12 +338,9 @@ input{
 
 /*NOSSOS_TRABALHOS.HTML*/
 .container_fotosNS{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espaço entre as imagens */
-    justify-content: center;
+    
 }
 
 .fotosNS{
-    width: 80px;
+
 }
