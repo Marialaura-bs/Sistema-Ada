@@ -179,6 +179,7 @@ footer {
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-top: 40px;
 }
 
 .form{
@@ -188,8 +189,8 @@ footer {
     justify-content: center;
     align-items: center;
     width: 25%;
-    height: 420px;
-    padding: 20px 8px; /* Espaçamento interno (topo e baixo, esquerda e direita) */
+    height: 400px;
+    padding: 20px 6px; /* Espaçamento interno (topo e baixo, esquerda e direita) */
     flex-direction: column;
 }
 
@@ -199,7 +200,12 @@ footer {
     font-style: normal;
     font-weight: 700;
     border-bottom: 2px solid #FED6DF;
-    padding-bottom: 7px;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+.fonte_form p a{
+    color: #FED6DF;
 }
 
 .fonte_form{
@@ -211,6 +217,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-size: smaller;
 }
 
 .botao{
@@ -233,6 +240,7 @@ input{
     border-radius: 10px;
     border: none;
 }
+
 
 /*GERAL-ROTAS*/
 .titulogeral{
