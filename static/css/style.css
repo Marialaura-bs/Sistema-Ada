@@ -169,6 +169,12 @@ footer {
 }
 
 /*LOGIN.HTML*/
+.senha_incorreta{
+    color: #ff0000;
+}
+.senha_incorreta img{
+    height: 20px;
+}
 .form_geral{
     justify-content: center;
     align-items: center;

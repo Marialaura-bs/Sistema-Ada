@@ -4,7 +4,7 @@
 {% set mensagens = get_flashed_messages(with_categories=true) %} 
 {% if mensagens %}     
 {% for categoria, msg in mensagens %}
-    <div>
+    <div class="senha_incorreta">
         {{ msg }}
     </div>
 {% endfor %}
