@@ -76,7 +76,7 @@ header{
     align-items: center;
     justify-content: space-between; 
     background-color: #343B4D;
-    height: 50px;
+    min-height: 50px;
     border-bottom: 2px solid #FED6DF;
 }
 
