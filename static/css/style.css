@@ -1,15 +1,12 @@
 html{
     height: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 body{
     background-color: #474F62;
     margin: 0;
     padding: 0;
-    height: 100%;
     min-height: 100vh;
     background: linear-gradient(to bottom right, #343B4D, #0b0d11);
     background-attachment: fixed;
@@ -17,6 +14,17 @@ body{
 }
 
 /*INDEX.HTML*/
+
+.backgroundgirls{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('/path/to/image.png') no-repeat center center;;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+}
+
 .texto_index{
     display: inline-block;
     margin: 0 auto; 
