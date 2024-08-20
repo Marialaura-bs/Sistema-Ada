@@ -30,7 +30,7 @@ body.paginaindex{
     display: inline-block;
     margin: 0 auto; 
     margin-left: 130px; 
-    margin-top: 70px;
+    margin-top: 100px;
     border-left: 2px solid #FED6DF; 
     padding-left: 30px;
 }
@@ -40,28 +40,31 @@ body.paginaindex{
     margin-top: 4px;
     color: #FFF;
     font-family: Inter;
-    font-size: 30px;
+    font-size: 3vw;
     font-style: normal;
     font-weight: 600;
 }
 
 .texto_index h1 img{
-    width: 75px;
+    width: 6vw;
     height: auto;
+    display: inline-flex;
+    align-items: center;
+
 }
 
 .texto_index h2{
     color: #FED6DF;
     font-family: Inter;
-    font-size: 25px;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 700;
 }
 
 .texto_index p{
     color: #FFF;
-    font-family: Poppins;
-    font-size: 18px;
+    font-family: Inter;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 400;
 }
