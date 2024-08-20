@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 
     {% block conteudo %}
-        <form action="{{url_for('login')}}" method="post">
-            <label for="">Usuário</label><br/>
-            <input type="text" name="usuario_login"><br/>
-            <label for="">Email</label><br/>
-            <input type="text" name="email"><br/>
-            <label>Senha</label><br/>
-            <input type="password" name="senha_login"><br/>
-            <button type="submit">Enviar</button>
+    <div class='cadastro_form_geral'>
+        <form class="cadastro_form" action="{{url_for('login')}}" method="post">
+            <h1 class="cadastro_titulo_form">Faça seu Cadastro</h1>
+    
+            <div class="cadastro_fonte_form">
+                <label for="">Usuário:</label><br/>
+                <input class="cadastro_input" placeholder="Nome de Usuário" type="text" name="usuario_login"><br/>
+    
+                <label for="">Email:</label><br/>
+                <input class="cadastro_input" placeholder="seuemail@exemplo.com" type="email" name="email"><br/>
+    
+                <label>Senha:</label><br/>
+                <input class="cadastro_input" placeholder="Senha" type="password" name="senha_login"><br/>
+    
+                <button class="cadastro_botao" type="submit">Enviar</button>
+            </div>
         </form>
+    </div>
     {%endblock%}
