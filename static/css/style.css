@@ -295,6 +295,7 @@ input:focus {
 
 /*CONHECA.HTML*/
 .cards_equipe{
+    width: 100%;
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -302,7 +303,7 @@ input:focus {
 .container_equipe{
     display: flex;
     gap: 35px;
-    width: 55%;
+    width: 50%;
 }
 
 .card{
