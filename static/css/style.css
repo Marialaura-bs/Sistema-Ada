@@ -8,6 +8,8 @@ html{
 
 body{
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     margin: 0;
     padding: 0;
@@ -29,12 +31,12 @@ body.paginaindex{
 }
 
 .texto_index{
-    display: inline-block;
-    margin: 0 auto; 
-    margin-left: 130px; 
-    margin-top: 80px;
-    border-left: 2px solid #FED6DF; 
-    padding-left: 30px;
+    display: inline-block; 
+    margin-left: 10%; 
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-left: 0.15vw solid #FED6DF; 
+    padding-left: 3%;
 }
 
 .texto_index h1{
@@ -74,34 +76,38 @@ body.paginaindex{
 
 /*BASE.HTML*/
 header{
+    width: 100%;
     font-family: "Inter";
     font-weight: bold;
-    font-size: large;
+    font-size: 0.8vw;
     display: flex;
     align-items: center;
     justify-content: space-between; 
     background-color: #343B4D;
     min-height: 2.5vw;
-    border-bottom: 2px solid #FED6DF;
+    border-bottom: 0.15vw solid #FED6DF;
 }
-
+nav {
+    width: 50%;
+}
 nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: 100%;
     align-items: center;
     display: flex;
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 3%;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 0.8vw;
 }
 
 .logo_ada img{
@@ -113,12 +119,12 @@ nav ul li a {
 }
 
 .rede_de_apoio{
-    padding: 6px 10px;
+    padding: 0.3% 0.8%;
     font-size: 0.8vw;
     text-align: center;
     background-color: #FED6DF;
     border: none;
-    border-radius: 10px;
+    border-radius: calc(0.5% + 0.7em);
     margin-left: 20px; 
     margin-right: 50px;
 }
@@ -130,7 +136,7 @@ nav ul li a {
 
 footer {
     background-color: #343B4D; /* Cor de fundo do footer */
-    border-top:2px solid #FED6DF;
+    border-top: 0.15vw solid #FED6DF;
     padding: 0.5vw;
     margin-top: auto;
 }
@@ -290,20 +296,22 @@ input:focus {
 }
 
 /*CONHECA.HTML*/
-.container_equipe{
+.cards_equipe{
     display: flex;
     justify-content: center; 
     align-items: center;
-    padding: 20px; 
+}
+.container_equipe{
+    display: flex;
     gap: 35px;
+    width: 55%;
 }
 
 .card{
     background: #3B4151;
     padding: 50px; 
     border-radius: 25px;
-    width: 120px;
-    height: 70px;
+    width: 20%;
     display: flex;
     text-align: center;
     flex-direction: column; 
