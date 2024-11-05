@@ -278,7 +278,7 @@ input:focus {
     font-family: "Poppins";
     font-style: normal;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 2vw;
     justify-content: center;
     color: #FFFFFF;
     margin-bottom: 0;
@@ -288,7 +288,7 @@ input:focus {
     font-family: "poppins";
     font-style: italic;
     font-weight: lighter;
-    font-size: 15px;
+    font-size: 1vw;
     color: #FED6DF;
     margin-top: 1px;
 }
@@ -350,12 +350,12 @@ input:focus {
 }
 
 .titulo_conheca_pt2{
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin-top: 3%;
+    margin-bottom: 5%;
     font-family: "Poppins";
     font-style: normal;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 2vw;
     color: #FFFFFF;
     display: flex;
     text-align: center; 
