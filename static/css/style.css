@@ -1,4 +1,5 @@
 html{
+    height: 100%;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -18,10 +19,11 @@ body{
     background-size: cover;
 }
 
+
 /*INDEX.HTML*/
 body.paginaindex{
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background: linear-gradient(to right, #343B4D, #343B4D, #343b4d1f),  url('/static/img/2174e790-023d-4e3a-8c8d-076eaad7daee.jpeg') ;
     background-position: right bottom ;
     background-repeat: no-repeat;
@@ -297,19 +299,18 @@ input:focus {
 .cards_equipe{
     display: flex;
     justify-content: center; 
-    align-items: center;
 }
 .container_equipe{
     display: flex;
-    gap: 35px;
+    gap: 2vw;
     width: 55%;
 }
 
 .card{
     background: #3B4151;
-    padding: 50px; 
-    border-radius: 25px;
-    width: 20%;
+    padding: 1.5vw; 
+    border-radius: 1vw;
+    Flex: 1;
     display: flex;
     text-align: center;
     flex-direction: column; 
