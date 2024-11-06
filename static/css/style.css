@@ -280,7 +280,7 @@ input:focus {
     font-family: "Poppins";
     font-style: normal;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 2vw;
     justify-content: center;
     color: #FFFFFF;
     margin-bottom: 0;
@@ -290,9 +290,9 @@ input:focus {
     font-family: "poppins";
     font-style: italic;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 1vw;
     color: #FED6DF;
-    margin-top: 1px;
+    margin-top: 0.2vw;
     margin-bottom: 2vw;
 }
 
@@ -338,7 +338,7 @@ input:focus {
     margin-top: 0;
     color: #FED6DF;
     font-family: Inter;
-    font-size: 10px;
+    font-size: 0.6vw;
     font-style: normal;
     font-weight: 300;
     text-align: center;
