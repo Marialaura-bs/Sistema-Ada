@@ -409,7 +409,7 @@ input:focus {
 
 /*NOSSOS_TRABALHOS.HTML*/
 .container_fotosNS{
-    margin-top: 30px;
+    margin-top: 1.5%;
     display: flex;
     flex-direction: column; /* Organiza as linhas em uma coluna */
     gap: 20px; /* Espaçamento entre as linhas de fotos */
@@ -432,14 +432,14 @@ input:focus {
 }
 
 .foto-item img{
-    width: 440px;
-    height: 300px;
+    width: 15vw;
+    height: 10vw;
 }
 
 .foto-item p{
     color: #FED6DF;
     font-family: Inter;
-    font-size: 13px;
+    font-size: 0.7vw;
     font-style: italic;
     font-weight: 200;
     margin: 0; 
@@ -452,7 +452,7 @@ input:focus {
     font-family: "Poppins";
     font-style: normal;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 1.4vw;
     color: #FFFFFF;
     display: flex;
     text-align: center; 
@@ -468,9 +468,9 @@ input:focus {
 
 .materiaisAP{
     background: #3B4151;
-    border-radius: 25px;
-    width: 920px;
-    height: 200px;
+    border-radius: 1vw;
+    width: 40%;
+    height: 10vw;
     border: 1px solid #FED6DF;
     display: flex;
     justify-content: center;
@@ -479,18 +479,17 @@ input:focus {
 }
 
 .bloco_materiais1{
-    margin-right: 120px;
+    margin-right: 3vw;
 }
 
 .bloco_materiais1 a, 
 .bloco_materiais2 a {
     color: #FFF;
     font-family: Inter;
-    font-size: 10px;
+    font-size: 0.5vw;
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
-    margin-bottom: 20px;
 }
 
 
