@@ -304,8 +304,8 @@ input:focus {
 }
 .container_equipe{
     display: flex;
-    gap: 35px;
-    width: 50%;
+    gap: 2vw;
+    width: 55%;
 }
 
 .card{
