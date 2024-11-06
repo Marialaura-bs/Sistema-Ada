@@ -304,32 +304,33 @@ input:focus {
 }
 .container_equipe{
     display: flex;
-    gap: 2vw;
-    width: 55%;
+    gap: 1.5vw;
+    width: 65%;
 }
 
 .card{
     background: #3B4151;
     padding: 1.5vw; 
     border-radius: 1vw;
-    Flex: 1;
+    width:30vw;
     display: flex;
     text-align: center;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
+  
 }
 
 .card h4{
-    margin: 14px;
-    margin-bottom: 5px;
+    margin: 0.7vw;
+    margin-bottom: 0.2vw;
     color: #FFF;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
     text-align: center;
-    white-space: nowrap;
+    flex-wrap: wrap;
 }
 
 .card p{
