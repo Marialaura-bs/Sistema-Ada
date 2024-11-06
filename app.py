@@ -44,6 +44,7 @@ def rede_de_apoio():
 def cadastro():
     return render_template("cadastro.html")
 
+
 lista_mensagens = []
 @app.route('/mensagens', methods=['post', 'get'])
 def mensagens():
