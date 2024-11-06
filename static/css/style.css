@@ -274,14 +274,13 @@ input:focus {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0 auto;
-    margin: 15px 0 0;
+    margin: 1.2vw 0 0;
 }
 .titulo{
     font-family: "Poppins";
     font-style: normal;
     font-weight: bolder;
-    font-size: 2vw;
+    font-size: 40px;
     justify-content: center;
     color: #FFFFFF;
     margin-bottom: 0;
@@ -291,9 +290,10 @@ input:focus {
     font-family: "poppins";
     font-style: italic;
     font-weight: lighter;
-    font-size: 1vw;
+    font-size: 22px;
     color: #FED6DF;
     margin-top: 1px;
+    margin-bottom: 2vw;
 }
 
 /*CONHECA.HTML*/
@@ -312,7 +312,7 @@ input:focus {
     background: #3B4151;
     padding: 1.5vw; 
     border-radius: 1vw;
-    width:30vw;
+    width: 30vw;
     display: flex;
     text-align: center;
     flex-direction: column; 
@@ -338,7 +338,7 @@ input:focus {
     margin-top: 0;
     color: #FED6DF;
     font-family: Inter;
-    font-size: 0.6vw;
+    font-size: 10px;
     font-style: normal;
     font-weight: 300;
     text-align: center;
