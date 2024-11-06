@@ -138,14 +138,14 @@ footer {
     background-color: #343B4D; /* Cor de fundo do footer */
     border-top: 0.15vw solid #FED6DF;
     padding: 0.5vw;
-    margin-top: auto;
+    margin-top: 3.8vw;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    
     
 }
 
@@ -161,8 +161,6 @@ footer {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
-    margin-bottom: 10%;
 }
 
 .form {
@@ -178,6 +176,7 @@ footer {
     padding: 1vw 0.8vw; /* Aumentei o espaçamento interno */
     flex-direction: column;
     transition: transform 0.3s ease-in-out; /* Adicionei uma leve animação */
+    margin-top: 3.5vw;
 }
 
 .form:hover {
