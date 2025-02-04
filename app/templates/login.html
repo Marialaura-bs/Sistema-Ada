@@ -11,12 +11,12 @@
 {% endif %}
 <body class="bodylogincadastro">
     <div class='form_geral'>
-        <form class="form" action="{{url_for('rede_de_apoio')}}" method="post">
+        <form class="form" action="{{url_for('user.conectar')}}" method="post">
             <h1 class="titulo_form">Faça seu Login</h1>
     
             <div class="fonte_form">
                 <label for="">Usuário:</label><br/>
-                <input placeholder="exemplo@email.com" type="text" name="usuario"><br/>
+                <input placeholder="exemplo@email.com" type="email" name="email"><br/>
     
                 <label>Senha:</label><br/>
                 <input placeholder="senha123" type="password" name="senha"><br/>

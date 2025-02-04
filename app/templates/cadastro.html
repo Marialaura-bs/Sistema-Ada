@@ -2,7 +2,7 @@
 
     {% block conteudo %}   
     <div class='cadastro_form_geral'>
-        <form class="cadastro_form" action="{{url_for('login')}}" method="post">
+        <form class="cadastro_form" action="{{url_for('user.usuario')}}" method="post">
             <h1 class="cadastro_titulo_form">Faça seu Cadastro</h1>
     
             <div class="cadastro_fonte_form">
@@ -14,6 +14,9 @@
     
                 <label>Senha:</label>
                 <input class="cadastro_input" placeholder="Senha" type="password" name="senha_login"><br/>
+
+                <input type="checkbox" id="is_admin" name="is_admin" checked />
+                <label for="is_admin">sou admin</label>>
     
                 <button class="cadastro_botao" type="submit">Enviar</button>
             </div>
