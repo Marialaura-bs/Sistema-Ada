@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
+{% block extra_css %}
+    .navbar, .rede_de_apoio, .logo-esquerda{
+        display: none !important;
+    }
+    .footer-container {
+        justify-content: end;
+    }
+{% endblock %}
 
 {% block conteudo %}
+
 {% set mensagens = get_flashed_messages(with_categories=true) %} 
 
 

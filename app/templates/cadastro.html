@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+{% block extra_css %}
+    .navbar, .rede_de_apoio, .logo-esquerda{
+        display: none !important;
+    }
+    .footer-container {
+        justify-content: end;
+    }
+{% endblock %}
 
     {% block conteudo %}   
     <div class='conteinerform_cadastro'>
