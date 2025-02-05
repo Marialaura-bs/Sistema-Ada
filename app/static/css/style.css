@@ -169,11 +169,8 @@ footer {
 }
 
 .form {
-<<<<<<< HEAD
-=======
-    background-color: #343B4C;
->>>>>>> refs/remotes/origin/main
     border-radius: calc(1% + 1.5em);
+    background-color: #343B4C;
     box-shadow: lightgray; /* Sombra para dar profundidade */
     display: flex;
     flex-direction: column;
