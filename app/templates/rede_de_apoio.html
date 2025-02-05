@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-<section class="titulogeral">
+<div class="titulogeral">
     <h1 class="titulo">Rede de Apoio</h1>
     <p class="subtitulo">Compartilhe sua experiência na área STEM e incentive outras mulheres.</p>
-</section>
-<section class="input">
+</div>
+
+<div class="input">
     <form action="{{ url_for('mensagens') }}" method="post">
         <input class="input_rede" type="text" id="mensagens" name="mensagens" placeholder="Fale conosco"><br>
-        <button class="botao_rede" type="submit">Enviar</button>
     </form>
-</section>
+    <div>
+        <button class="botaorede" type="submit">Enviar</button>
+    </div>
+</div>
 
 <!-- Se a lista estiver vazia, mostrar 'sem mensagens' -->
 {% if not lista %}
