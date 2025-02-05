@@ -597,3 +597,9 @@ input {
     height: 20px;
 }
 
+/*REDE DE APOIO*/
+ .input_rede{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
