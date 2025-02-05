@@ -2,29 +2,38 @@
 
 {% block conteudo %}
 {% set mensagens = get_flashed_messages(with_categories=true) %} 
-{% if mensagens %}     
-{% for categoria, msg in mensagens %}
-    <div class="senha_incorreta">
-        {{ msg }}
-    </div>
-{% endfor %}
-{% endif %}
-<body class="bodylogincadastro">
-    <div class='form_geral'>
+
+
+<body>
+    <div class='conteinerform'>
         <form class="form" action="{{url_for('user.conectar')}}" method="post">
             <h1 class="titulo_form">Faça seu Login</h1>
+            
+            <div class="conteiner_inputs">
+                <label for="">Usuário:</label>
+                <input placeholder="Exemplo@email.com" type="email" name="email"><br/>
     
-            <div class="fonte_form">
-                <label for="">Usuário:</label><br/>
-                <input placeholder="exemplo@email.com" type="email" name="email"><br/>
-    
-                <label>Senha:</label><br/>
-                <input placeholder="senha123" type="password" name="senha"><br/>
-    
+                <label>Senha:</label>
+                <input placeholder="Senha" type="password" name="senha"><br/>
+            </div>
+            <div>
                 <button class="botao" type="submit">Entrar</button>
+            </div>
+            <div class="facacadastro">
                 <p>Não tem conta? <a href="{{url_for('cadastro')}}">Faça seu cadastro</a></p>
             </div>
+
+            {% if mensagens %}
+            {% for categoria, msg in mensagens %}
+                <div class="senha_incorreta">
+                    {{ msg }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
         </form>
     </div>
 </body>
+
+
 {%endblock%}

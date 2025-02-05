@@ -13,7 +13,7 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #343B4D, #0b0d11);
+    background: linear-gradient(to bottom right, #000000, #343B4C);
     background-attachment: fixed;
     background-size: cover;
     flex-direction: column;
@@ -73,7 +73,6 @@ body.paginaindex{
     font-style: normal;
     font-weight: 400;
 }
-
 
 /*BASE.HTML*/
 header{
@@ -158,8 +157,10 @@ footer {
     margin-left: 30px;
 }
 
+
+
 /*LOGIN.HTML*/
-.form_geral {
+.conteinerform {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -167,97 +168,186 @@ footer {
 }
 
 .form {
-<<<<<<< HEAD
-=======
-    background-color: #343B4C;
->>>>>>> refs/remotes/origin/main
     border-radius: calc(1% + 1.5em);
-    box-shadow: 0px 0.5vw 1vw rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    background-color: #343B4C;
+    box-shadow: lightgray; /* Sombra para dar profundidade */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    max-width: 1920px;
-    height: 35vw;
     flex-direction: column;
-    transition: transform 0.3s ease-in-out; /* Adicionei uma leve animação */
+    align-items: center;
+    width: 28vw;
+    height: 36vw;
+    max-width: 1920px;
+    
 }
-
-
 .titulo_form {
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 1000;
-    font-size: 38px; /* Aumentei o tamanho da fonte */
+    font-size: 38px;
+    padding-top: 2.5vw;
     border-bottom: 3px solid #FED6DF; /* Aumentei a espessura da linha */
-    margin-bottom: 30px;
     text-align: center;
     padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
     width: 80%; /* Para alinhar a linha com o texto */
 }
 
-.fonte_form p a {
-    color: #FED6DF;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out; /* Animação suave ao passar o mouse */
-}
-
-.fonte_form p a:hover {
-    color: #ffb6c1; /* Cor ao passar o mouse */
-}
-
-.fonte_form {
+.conteiner_inputs {
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     display: flex;
-    align-items: center;
+    padding-top: 35px;
+    align-items: flex-start;
     flex-direction: column;
-    font-size: 18px; /* Aumentei o tamanho da fonte */
+    font-size: 20px; /* Aumentei o tamanho da fonte */
 }
 
 input {
-    width: 100%; 
-    max-width: 300px; 
+    width: 18vw; 
     padding: 10px; 
     border-radius: 8px;
-    border: 1px solid #CCCCCC;
-    margin-bottom: 20px;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    margin-bottom: 25px;
     background-color: #fbfbfd; /* Fundo do input */
     color: #000000; /* Cor do texto */
     font-size: 16px;
-    transition: background-color 0.3s ease-in-out; /* Animação suave ao focar */
 }
 
 .botao {
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
+    height: 3vw;
+    width: 16vw;
     background-color: #FED6DF;
     color: #404758;
     border: none; 
+    margin-top: 20px;
     padding: 10px 0; 
     text-align: center;
     border-radius: 12px;
-    width: 100%;
-    max-width: 300px;
-    cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Adicionada animação ao botão */
 }
 
 .botao:hover {
     background-color: #ffb6c1; /* Cor ao passar o mouse */
-    transform: translateY(-2px); /* Efeito de clique */
+    transform: scale(1.12); /* Efeito de clique */
+}
+
+.facacadastro{
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+
+}
+.facacadastro a {
+    color: #FED6DF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out; /* Animação suave ao passar o mouse */
+}
+.facacadastro p a:hover {
+    color: #ffb6c1; /* Cor ao passar o mouse */
 }
 
 .senha_incorreta {
-    color: #ff0000;
+    color: #db7c7c;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .senha_incorreta img {
     height: 20px;
+}
+
+/*CADASTRO.HTML*/
+
+.conteinerform_cadastro {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.cadastro_form {
+    background-color: #343b4c;
+    border-radius: calc(1% + 1.5em);
+    box-shadow: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 33vw;
+    max-width: 1920px;
+}
+
+.cadastro_titulo_form {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
+    border-bottom: 3px solid #FED6DF; /* Aumentei a espessura da linha */
+    text-align: center;
+    padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
+    width: 80%; /* Para alinhar a linha com o texto */
+
+}
+
+.conteiner_inputs_cadastro {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    display: flex;
+    padding-top: 35px;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 20px; /* Aumentei o tamanho da fonte */
+}
+
+input {
+    width: 18vw; 
+    padding: 10px; 
+    border-radius: 8px;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    margin-bottom: 25px;
+    background-color: #fbfbfd; /* Fundo do input */
+    color: #000000; /* Cor do texto */
+    font-size: 16px;
+}
+
+.admcheck {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    border: none;
+
+}
+
+.cadastro_botao {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    height: 3vw;
+    width: 16vw;
+    background-color: #FED6DF;
+    color: #404758;
+    border: none; 
+    margin-top: 20px;
+    padding: 10px 0; 
+    text-align: center;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Adicionada animação ao botão */
+}
+
+.cadastro_botao:hover {
+    background-color: #ffb6c1; /* Cor ao passar o mouse */
+    transform: scale(1.12); /* Efeito de clique */
 }
 
 
@@ -270,6 +360,7 @@ input {
     text-align: center;
     margin: 1.2vw 0 0;
 }
+
 .titulo{
     font-family: "Poppins";
     font-style: normal;
@@ -487,6 +578,7 @@ input {
 }
 
 
+<<<<<<< HEAD
 /*CADASTRO.HTML*/
 
 .cadastro_form_geral {
@@ -598,8 +690,35 @@ input {
 }
 
 /*REDE DE APOIO*/
- .input_rede{
+.input{
     display: flex;
     align-items: center;
     justify-content: center;
  }
+
+.input_rede{
+    margin-top: 10px;
+    width: 500px;
+    height: 100px;
+}
+
+.botao_rede{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #FED6DF;
+    color: #404758;
+    border: none; 
+    padding: 10px 0; 
+    text-align: center;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Adicionada animação ao botão */
+ }
+=======
+>>>>>>> refs/remotes/origin/main
