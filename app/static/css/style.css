@@ -73,8 +73,6 @@ body.paginaindex{
     font-style: normal;
     font-weight: 400;
 }
-
-
 /*BASE.HTML*/
 header{
     width: 100%;
@@ -360,6 +358,7 @@ input {
     text-align: center;
     margin: 1.2vw 0 0;
 }
+
 .titulo{
     font-family: "Poppins";
     font-style: normal;
@@ -576,4 +575,41 @@ input {
     text-decoration: none;
 }
 
+/*REDE DE APOIO*/
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
 
+.input_rede{
+    margin-top: 10px;
+    width: 500px;
+    height: 100px;
+}
+
+.botaorede{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    height: 2.5vw;
+    width: 14vw;
+    background-color: #FED6DF;
+    color: #404758;
+    border: none; 
+    margin-top: 20px;
+    padding: 10px 0; 
+    text-align: center;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Adicionada animação ao botão */
+ }
+ .subtitulo{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
