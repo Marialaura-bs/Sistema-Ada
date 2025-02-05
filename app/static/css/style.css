@@ -590,7 +590,7 @@ input {
     height: 100px;
 }
 
-.botaorede{
+.input .botaorede{
     display: flex;
     align-items: center;
     justify-content: center;
