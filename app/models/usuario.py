@@ -16,11 +16,3 @@ class User(db.Model, UserMixin):
     self.is_admin = is_admin
    def __repr__(self):
      return f'<User {self.name}>'
-   
-   def as_dict(self):
-        return {
-            'id': self.id,
-            'name': self.name,
-            'email': self.email,
-            'is_admin': self.is_admin
-        }
