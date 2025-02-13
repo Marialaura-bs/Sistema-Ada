@@ -84,7 +84,7 @@ header{
     align-items: center;
     justify-content: space-between; 
     background-color: #343B4D;
-    min-height: 2.5vw;
+    padding: 5px;
     border-bottom: 0.15vw solid #FED6DF;
 }
 
@@ -109,6 +109,12 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 0.8vw;
+}
+
+.navbar li a:hover {
+    transition: color 0.3s ease-in-out;
+    color: #ffb6c1; /* Cor ao passar o mouse */
+    
 }
 
 .logo_ada img{
@@ -613,3 +619,6 @@ input {
     align-items: center;
     justify-content: center;
  }
+
+ /*DADOS*/
+ 
