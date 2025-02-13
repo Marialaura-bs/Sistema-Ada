@@ -84,13 +84,14 @@ header{
     align-items: center;
     justify-content: space-between; 
     background-color: #343B4D;
-    padding: 5px;
+    padding: 7px;
     border-bottom: 0.15vw solid #FED6DF;
 }
 
 nav {
     width: 50%;
 }
+
 nav ul{
     list-style-type: none;
     margin: 0;
@@ -124,6 +125,7 @@ nav ul li a {
     display: flex;
     align-items: center;
 }
+
 
 .rede_de_apoio{
     padding: 0.3% 0.8%;
