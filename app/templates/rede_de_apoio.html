@@ -7,7 +7,7 @@
 </div>
 
 <div class="formrededeapoio">
-        <form action="{{ url_for('mensagens') }}" method="post">
+        <form action="{{ url_for('user.mensagens') }}" method="post">
             <div>
                 <input class="textboxinput" type="text" id="mensagens" name="mensagens" placeholder="Fale conosco"><br>
             </div>
@@ -17,19 +17,13 @@
         </form>
 </div>
 
-<!-- Se a lista estiver vazia, mostrar 'sem mensagens' -->
-{% if not lista %}
-    <p class="subtitulo">Sem mensagens.</p>
-{% else %}
-    <!-- Exibe a lista de mensagens -->
-    <ul>
-        {% for i in lista %}
-            <li class="card">
-                <p>{{ i }}</p> 
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
+<ul>
+    {% for i in mensagens %}
+        <li class="card">
+            <p>{{ i }}</p> 
+        </li>
+    {% endfor %}
+</ul>
 
 <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
 	<li class="nav-item active">

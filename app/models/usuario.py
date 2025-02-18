@@ -1,6 +1,7 @@
 from config import db
 from flask_login import UserMixin
 
+
 class User(db.Model, UserMixin):
    __tablename__="users"
    id = db.Column(db.Integer, primary_key=True, nullable=False, unique=True)
@@ -16,3 +17,13 @@ class User(db.Model, UserMixin):
     self.is_admin = is_admin
    def __repr__(self):
      return f'<User {self.name}>'
+   
+class Mensagens(db.Model, UserMixin):
+   __tablename__="mensagens"
+   id = db.Column(db.Integer, primary_key=True, nullable=False, unique=True)
+   mensagem = db.Column(db.String(500), nullable=False)
+   
+   def __init__(self, mensagem):
+    self.mensagem = mensagem
+   def __repr__(self):
+     return f'<Mensagens {self.mensagem}>'
