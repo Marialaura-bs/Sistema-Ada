@@ -36,7 +36,6 @@ def conectar():
         
         if user and check_password_hash(user.senha, data['senha']):
             login_user(user, remember=True)
-            flash('Login bem-sucedido!', 'success')
             return redirect(url_for('user.rede_apoio'))  # Sem alteração aqui
         else:
             flash('Email ou senha incorretos', 'danger')
