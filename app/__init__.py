@@ -52,13 +52,6 @@ def create_app():
     @app.route('/cadastro')
     def cadastro():
         return render_template("cadastro.html")
-    
-    lista_mensagens = []
-    @app.route('/mensagens', methods=['post', 'get'])
-    def mensagens():
-        mensagens = request.form['mensagens']
-        lista_mensagens.append(mensagens)
-        return render_template('rede_de_apoio.html', mensagens=mensagens, lista=lista_mensagens)
 
     with app.app_context():
         db.create_all()
