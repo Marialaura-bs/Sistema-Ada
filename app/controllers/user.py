@@ -16,7 +16,7 @@ def usuario():
         data = request.form
 
         if User.query.filter_by(email=data['email']).first():
-            return redirect(url_for('user.login'))  # Alterado aqui
+            return redirect(url_for('user.login'))
 
         hashed_password = generate_password_hash(data['senha_login'])
         is_admin = data.get('is_admin') == 'on'
@@ -24,9 +24,9 @@ def usuario():
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
-        return redirect(url_for('user.login'))  # Alterado aqui
+        return redirect(url_for('user.login'))  
     else: 
-        return redirect(url_for('user.cadastro'))  # Alterado aqui, se necessário
+        return redirect(url_for('user.cadastro'))  
 
 @user_bp.route('/conectar', methods=['GET', 'POST'])
 def conectar():
