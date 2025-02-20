@@ -40,7 +40,7 @@
 <ul>
     {% for i in mensagens %}
         <li class="card">
-            <p>{{current_user.name}}</p>
+            <p>{{ i.user.name }}</p>  <!-- Exibe o nome do usuário associado à mensagem -->
             <p>{{ i.mensagem }}</p> 
         </li>
     {% endfor %}

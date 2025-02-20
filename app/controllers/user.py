@@ -56,16 +56,16 @@ def logoff():
 @user_bp.route('/rede_apoio')
 @login_required
 def rede_apoio():
-    return render_template('rede_de_apoio.html') 
+    mensagens = Mensagens.query.all()
+    return render_template('rede_de_apoio.html', mensagens=mensagens)
 
-@user_bp.route('/mensagens', methods=['GET', 'POST'])
+@user_bp.route('/mensagens', methods=['POST'])
 def mensagens():
     if request.method == 'POST':
         data = request.form
-        nova_mensagem = Mensagens(mensagem=data['mensagens'])
+        nova_mensagem = Mensagens(mensagem=data['mensagens'], user_id=current_user.id)  # Associa a mensagem ao usuário logado
         db.session.add(nova_mensagem)
         db.session.commit()
     
-    # Buscar todas as mensagens independentemente do método da requisição
-    mensagens = Mensagens.query.all()
-    return render_template('rede_de_apoio.html', mensagens=mensagens)
+    return redirect(url_for('user.rede_apoio'))
+    
