@@ -6,6 +6,11 @@ from flask_login import login_user, logout_user, login_required
 from config import db  # Aqui estamos importando o db
 
 user_bp = Blueprint('user', __name__)
+  
+@user_bp.route('/user')
+def usuarios():
+    usuarios = User.query.all()  # Alterado de 'user' para 'User'
+    return jsonify([usuario.as_dict() for usuario in usuarios])
 
 @user_bp.route('/login', methods=['GET', 'POST'])
 def login():
