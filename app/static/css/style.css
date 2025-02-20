@@ -147,7 +147,6 @@ footer {
     background-color: #343B4D; /* Cor de fundo do footer */
     border-top: 0.15vw solid #FED6DF;
     padding: 0.5vw;
-    margin-top: 3.8vw;
 }
 
 .footer-container {
@@ -585,6 +584,71 @@ input {
 }
 
 /*REDE DE APOIO*/
+.pag_rede_apoio {
+    display: flex;
+    justify-content: space-between; /* Garante espaçamento entre os elementos */
+    align-items: stretch; /* Faz com que os elementos cresçam igualmente */
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 100vh;
+}
+
+.pag_rede_apoio > section {
+    flex: 1; /* Ocupa o restante do espaço disponível */
+}
+
+.sidebar_rda{
+    width: 30vh; /* Largura da sidebar */
+    height: 100vh; /* Altura total da tela */
+    background-color: #2C2F3F; /* Cor de fundo escura */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Poppins;
+}
+
+.sidebar_rda h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 15px;
+    background: #FED6DF;
+    color: #343B4D;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    width: fit-content; /* Faz com que o tamanho se ajuste ao conteúdo */
+    margin-bottom: 10px;
+}
+
+.infopessoais {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Botão "Sair" */
+.nav-link {
+    display: inline-block;
+    background-color: #FED6DF; /* Cor de fundo */
+    color: #343B4D; /* Cor do texto */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Borda arredondada */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Efeito hover */
+.nav-link:hover {
+    background-color: #F2AEBB; /* Cor mais escura ao passar o mouse */
+    color: white;
+}
+
+
 .formrededeapoio{
     display: flex;
     align-items: center;
