@@ -1,8 +1,8 @@
 from flask import Blueprint, request, render_template, flash, redirect, jsonify, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.models.usuario import User
-from app.models.usuario import Mensagens
-from flask_login import login_user, logout_user, login_required
+#from app.models.usuario import Mensagens
+from flask_login import login_user, logout_user, login_required, current_user
 from config import db  # Aqui estamos importando o db
 
 user_bp = Blueprint('user', __name__)
@@ -37,18 +37,16 @@ def usuario():
 @user_bp.route('/conectar', methods=['GET', 'POST'])
 def conectar():
     if request.method == 'POST':
-        data = request.form
-        user = User.query.filter_by(email=data['email']).first()
         
-        if user and check_password_hash(user.senha, data['senha']):
+        user = User.query.filter_by(email=request.form['email']).first()
+        
+        if user and check_password_hash(user.senha, request.form['senha']):
             login_user(user, remember=True)
-            flash('Login bem-sucedido!', 'success')
-            return redirect(url_for('user.rede_apoio'))  
+            return render_template('rede_de_apoio.html')   
         else:
             flash('Email ou senha incorretos', 'danger')
             return redirect(url_for('user.login')) 
 
-    return render_template('login.html')
 
 @user_bp.route('/logoff')
 def logoff():
