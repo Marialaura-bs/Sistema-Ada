@@ -42,7 +42,16 @@ def conectar():
         
         if user and check_password_hash(user.senha, request.form['senha']):
             login_user(user, remember=True)
+<<<<<<< HEAD
             return render_template('rede_de_apoio.html')   
+=======
+<<<<<<< HEAD
+            return redirect(url_for('user.rede_apoio'))  # Sem alteração aqui
+=======
+            flash('Login bem-sucedido!', 'success')
+            return redirect(url_for('user.rede_apoio'))  
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main
         else:
             flash('Email ou senha incorretos', 'danger')
             return redirect(url_for('user.login')) 
