@@ -1,13 +1,35 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-<div class="titulogeral">
-    <h1 class="titulo">Rede de Apoio</h1>
-    <p class="subtitulo">Compartilhe sua experiência na área STEM e incentive outras mulheres.</p>
-</div>
+<section class="pag_rede_apoio">
+    <aside class="sidebar_rda">
+        <div>
+            <img src="/static/img/Perfil.svg" alt="PerfilUsuário" class="PerfilUsuário">
+
+        <h3>Dados Pessoais</h3>
+        <div class="infopessoais">
+            <p>Email Pessoal</p>
+            <p>Senha</p>
+        </div>
+
+        
+        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <p class="nav-item active">
+                    <a class="nav-link" href="{{url_for('user.logoff')}}">Sair</a>
+            </p>
+        </ul>
+        </div>
+
+    </aside>
+
+    <section>
+        <div class="titulogeral">
+            <h1 class="titulo">Rede de Apoio</h1>
+            <p class="subtitulo">Compartilhe sua experiência na área STEM e incentive outras mulheres.</p>
+        </div>
 
 <div class="formrededeapoio">
-        <form action="{{ url_for('mensagens') }}" method="post">
+        <form action="{{ url_for('user.mensagens') }}" method="post">
             <div>
                 <input class="textboxinput" type="text" id="mensagens" name="mensagens" placeholder="Fale conosco"><br>
             </div>
@@ -17,19 +39,13 @@
         </form>
 </div>
 
-<!-- Se a lista estiver vazia, mostrar 'sem mensagens' -->
-{% if not lista %}
-    <p class="subtitulo">Sem mensagens.</p>
-{% else %}
-    <!-- Exibe a lista de mensagens -->
-    <ul>
-        {% for i in lista %}
-            <li class="card">
-                <p>{{ i }}</p> 
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
+<ul>
+    {% for i in mensagens %}
+        <li class="card">
+            <p>{{ i }}</p> 
+        </li>
+    {% endfor %}
+</ul>
 
 <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
 	<li class="nav-item active">
