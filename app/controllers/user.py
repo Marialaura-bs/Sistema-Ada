@@ -1,7 +1,7 @@
 from flask import Blueprint, request, render_template, flash, redirect, jsonify, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.models.usuario import User
-#from app.models.usuario import Mensagens
+from app.models.mensagens import Mensagens
 from flask_login import login_user, logout_user, login_required, current_user
 from config import db  # Aqui estamos importando o db
 
@@ -65,5 +65,7 @@ def mensagens():
         nova_mensagem = Mensagens(mensagem=data['mensagens'])
         db.session.add(nova_mensagem)
         db.session.commit()
-        login_user(nova_mensagem)
-        return render_template('rede_de_apoio.html', mensagens=nova_mensagem)
+    
+    # Buscar todas as mensagens independentemente do método da requisição
+    mensagens = Mensagens.query.all()
+    return render_template('rede_de_apoio.html', mensagens=mensagens)

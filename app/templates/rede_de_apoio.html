@@ -40,7 +40,8 @@
 <ul>
     {% for i in mensagens %}
         <li class="card">
-            <p>{{ i }}</p> 
+            <p>{{current_user.name}}</p>
+            <p>{{ i.mensagem }}</p> 
         </li>
     {% endfor %}
 </ul>
