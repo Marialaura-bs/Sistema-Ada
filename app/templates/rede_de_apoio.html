@@ -40,8 +40,8 @@
 <ul>
     {% for i in mensagens %}
         <li class="card">
-            <p>{{ i.user.name }}</p>  <!-- Exibe o nome do usuário associado à mensagem -->
-            <p>{{ i.mensagem }}</p> 
+            <p>{{ i.user.name if i.user and i.user.name else 'Usuário desconhecido' }}:</p>
+            <p>{{ i.mensagem }}</p>
         </li>
     {% endfor %}
 </ul>

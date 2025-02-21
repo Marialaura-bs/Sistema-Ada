@@ -4,6 +4,7 @@ from app.models.usuario import User
 from app.models.mensagens import Mensagens
 from flask_login import login_user, logout_user, login_required, current_user
 from config import db  # Aqui estamos importando o db
+from sqlalchemy.orm import joinedload
 
 user_bp = Blueprint('user', __name__)
   
@@ -53,11 +54,13 @@ def logoff():
 	logout_user()
 	return redirect('/')
 
+
 @user_bp.route('/rede_apoio')
 @login_required
 def rede_apoio():
-    mensagens = Mensagens.query.all()
+    mensagens = Mensagens.query.options(joinedload(Mensagens.user)).all()
     return render_template('rede_de_apoio.html', mensagens=mensagens)
+
 
 @user_bp.route('/mensagens', methods=['POST'])
 def mensagens():
