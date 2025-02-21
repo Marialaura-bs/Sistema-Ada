@@ -1,11 +1,17 @@
 from flask import Blueprint, request, render_template, flash, redirect, jsonify, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.models.usuario import User
-from app.models.usuario import Mensagens
-from flask_login import login_user, logout_user, login_required
+from app.models.mensagens import Mensagens
+from flask_login import login_user, logout_user, login_required, current_user
 from config import db  # Aqui estamos importando o db
+from sqlalchemy.orm import joinedload
 
 user_bp = Blueprint('user', __name__)
+  
+@user_bp.route('/user')
+def usuarios():
+    usuarios = User.query.all()  # Alterado de 'user' para 'User'
+    return jsonify([usuario.as_dict() for usuario in usuarios])
 
 @user_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -32,35 +38,36 @@ def usuario():
 @user_bp.route('/conectar', methods=['GET', 'POST'])
 def conectar():
     if request.method == 'POST':
-        data = request.form
-        user = User.query.filter_by(email=data['email']).first()
         
-        if user and check_password_hash(user.senha, data['senha']):
+        user = User.query.filter_by(email=request.form['email']).first()
+        
+        if user and check_password_hash(user.senha, request.form['senha']):
             login_user(user, remember=True)
-            flash('Login bem-sucedido!', 'success')
-            return redirect(url_for('user.rede_apoio'))  
+            return render_template('rede_de_apoio.html')   
         else:
             flash('Email ou senha incorretos', 'danger')
             return redirect(url_for('user.login')) 
 
-    return render_template('login.html')
 
 @user_bp.route('/logoff')
 def logoff():
 	logout_user()
 	return redirect('/')
 
+
 @user_bp.route('/rede_apoio')
 @login_required
 def rede_apoio():
-    return render_template('rede_de_apoio.html') 
+    mensagens = Mensagens.query.options(joinedload(Mensagens.user)).all()
+    return render_template('rede_de_apoio.html', mensagens=mensagens)
 
-@user_bp.route('/mensagens', methods=['GET', 'POST'])
+
+@user_bp.route('/mensagens', methods=['POST'])
 def mensagens():
     if request.method == 'POST':
         data = request.form
-        nova_mensagem = Mensagens(mensagem=data['mensagens'])
+        nova_mensagem = Mensagens(mensagem=data['mensagens'], user_id=current_user.id)  # Associa a mensagem ao usuário logado
         db.session.add(nova_mensagem)
         db.session.commit()
-        login_user(nova_mensagem)
-        return render_template('rede_de_apoio.html', mensagens=nova_mensagem)
+    return redirect(url_for('user.rede_apoio'))
+    

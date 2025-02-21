@@ -18,12 +18,12 @@ class User(db.Model, UserMixin):
    def __repr__(self):
      return f'<User {self.name}>'
    
-class Mensagens(db.Model, UserMixin):
-   __tablename__="mensagens"
-   id = db.Column(db.Integer, primary_key=True, nullable=False, unique=True)
-   mensagem = db.Column(db.String(500), nullable=False)
-   
-   def __init__(self, mensagem):
-    self.mensagem = mensagem
-   def __repr__(self):
-     return f'<Mensagens {self.mensagem}>'
+   def as_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'email': self.email,
+            'is_admin': self.is_admin
+        }
+
+
