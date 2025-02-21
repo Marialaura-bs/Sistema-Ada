@@ -66,6 +66,5 @@ def mensagens():
         nova_mensagem = Mensagens(mensagem=data['mensagens'], user_id=current_user.id)  # Associa a mensagem ao usuário logado
         db.session.add(nova_mensagem)
         db.session.commit()
-    
     return redirect(url_for('user.rede_apoio'))
     
