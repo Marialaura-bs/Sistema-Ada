@@ -5,7 +5,18 @@
         <h1 class="titulo">Nossos Trabalhos</h1>
         <p class="subtitulo">Conheça abaixo alguns de nossos trabalhos</p>
     </section>
-
+    <ul>
+        {% for trabalho in trabalhos %}
+        <li>
+            <h2>{{ trabalho.titulo }}</h2>
+            <p>{{ trabalho.descricao }}</p>
+            <img src="{{ url_for('static', filename=trabalho.imagem) }}" alt="{{ trabalho.titulo }}">
+            {% if trabalho.link %}
+            <p><a href="{{ trabalho.link }}" target="_blank">Veja o artigo submetido ao evento</a></p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
     <section class="banner">
         <p>O projeto ADA já atuou em diversas escolas por Natal, mudando e conscientizando a vida de diversas mulheres por onde passa.</p>
         <img src="app/static/img/7 2" alt="">

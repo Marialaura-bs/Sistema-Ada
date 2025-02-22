@@ -37,10 +37,6 @@ def create_app():
     def conheca():
         return render_template('conheca.html')
 
-    @app.route('/nossos_trabalhos')
-    def nossos_trabalhos():
-        return render_template('nossos_trabalhos.html')
-
     @app.route('/lovelace')
     def lovelace():
         return render_template('lovelace.html')
@@ -48,6 +44,10 @@ def create_app():
     @app.route('/dados')
     def dados():
         return render_template('dados.html')
+    
+    @app.route('/form_adm')
+    def form_adm():
+        return render_template('formulario_adm.html')
         
     @app.route('/cadastro')
     def cadastro():
