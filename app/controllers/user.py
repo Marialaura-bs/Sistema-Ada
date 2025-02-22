@@ -7,9 +7,10 @@ from flask_login import login_user, logout_user, login_required, current_user
 from config import db  # Aqui estamos importando o db
 from sqlalchemy.orm import joinedload
 import os
+from werkzeug.utils import secure_filename
 
 user_bp = Blueprint('user', __name__)
-UPLOAD_FOLDER = 'static/uploads/'
+UPLOAD_FOLDER = os.path.join('static', 'uploads')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @user_bp.route('/upload', methods=['POST'])
@@ -38,13 +39,13 @@ def upload_trabalho():
     file.save(caminho_imagem)
 
     # Salva apenas o caminho relativo ao `static/`
-    caminho_imagem_relativo = f'uploads/{filename}'
+    caminho_imagem_relativo = os.path.join('uploads', filename)  # 'uploads/nome_do_arquivo.jpg'
 
     # Salva os dados no banco de dados
     novo_trabalho = Trabalho(
         titulo=titulo,
         descricao=descricao,
-        imagem=caminho_imagem_relativo,  # Apenas 'uploads/nome.jpg'
+        imagem=caminho_imagem_relativo,  # Apenas o caminho relativo
         link=link
     )
 
@@ -55,7 +56,7 @@ def upload_trabalho():
 
 @user_bp.route('/nossos_trabalhos')
 def nossos_trabalhos():
-    trabalhos = Trabalho.query.all()
+    trabalhos = Trabalho.query.all() 
     return render_template('nossos_trabalhos.html', trabalhos=trabalhos)
   
 @user_bp.route('/user')
