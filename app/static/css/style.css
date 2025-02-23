@@ -375,6 +375,8 @@ input {
     justify-content: center;
     color: #FFFFFF;
     margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
 }
 
 .subtitulo{
@@ -383,8 +385,10 @@ input {
     font-weight: lighter;
     font-size: 1vw;
     color: #FED6DF;
-    margin-top: 0.2vw;
+    margin-top: 0;
+    padding-top: 0;
     margin-bottom: 2vw;
+    text-align: center;
 }
 
 /*CONHECA.HTML*/
@@ -534,10 +538,31 @@ input {
     margin-left: 5rem;
     color: #FFF;
     font-family: Poppins;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     width: 50%;
+}
+
+.materiais-apresentados{
+    background: #343B4D;
+    padding: 2rem;
+    width: 100vw;
+    height: 60vh;
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+}
+
+.titulo_materiaisAP{
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: bolder;
+    font-size: 2vw;
+    margin: 0 auto; /* Centraliza o elemento */
+    
 }
 
 /*REDE DE APOIO*/
