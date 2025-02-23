@@ -204,7 +204,11 @@ footer {
     padding-top: 35px;
     align-items: flex-start;
     flex-direction: column;
-    font-size: 20px; /* Aumentei o tamanho da fonte */
+    font-size: 18px; /* Aumentei o tamanho da fonte */
+}
+
+.conteiner_inputs label{
+    margin-bottom: 5px;
 }
 
 input {
@@ -225,11 +229,12 @@ input {
     font-size: 20px;
     font-weight: 700;
     height: 3vw;
-    width: 16vw;
+    width: 14vw;
     background-color: #FED6DF;
     color: #404758;
     border: none; 
-    margin-top: 20px;
+    margin-top: 13px;
+    margin-bottom: 8px;
     padding: 10px 0; 
     text-align: center;
     border-radius: 12px;
@@ -237,7 +242,7 @@ input {
 }
 
 .botao:hover {
-    background-color: #ffb6c1; /* Cor ao passar o mouse */
+    background-color: #FED6DF; /* Cor ao passar o mouse */
     transform: scale(1.12); /* Efeito de clique */
 }
 
@@ -275,31 +280,33 @@ input {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
 }
 
 .cadastro_form {
-    background-color: #343b4c;
     border-radius: calc(1% + 1.5em);
-    box-shadow: lightgray;
+    background-color: #343B4C;
+    box-shadow: lightgray; /* Sombra para dar profundidade */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 30vw;
-    height: 33vw;
+    width: 28vw;
+    height: 36vw;
     max-width: 1920px;
+}
+
+.conteiner_inputs_cadastro label{
+    margin-bottom: 6px;
 }
 
 .cadastro_titulo_form {
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
     font-size: 38px;
-    border-bottom: 3px solid #FED6DF; /* Aumentei a espessura da linha */
+    padding-top: 2.5vw;
+    border-bottom: 3px solid #FED6DF; 
     text-align: center;
-    padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
-    width: 80%; /* Para alinhar a linha com o texto */
-
+    padding-bottom: 10px; 
+    width: 80%; 
 }
 
 .conteiner_inputs_cadastro {
@@ -307,10 +314,10 @@ input {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     display: flex;
-    padding-top: 35px;
+    padding-top: 20px;
     align-items: flex-start;
     flex-direction: column;
-    font-size: 20px; /* Aumentei o tamanho da fonte */
+    font-size: 18px; 
 }
 
 input {
@@ -326,13 +333,29 @@ input {
     font-size: 16px;
 }
 
+.conteiner_inputs_cadastro input{
+    margin-bottom: 10px;
+}
+
 .admcheck {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
-    display: flex;
-    align-items: center; /* Alinha verticalmente */
-    border: none;
+    width: fit-content;
+}
 
+.admcheck input{
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.admcheck label{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 .cadastro_botao {
@@ -561,7 +584,7 @@ input {
     font-family: "Poppins";
     font-weight: bolder;
     font-size: 2vw;
-    margin: 0 auto; /* Centraliza o elemento */
+    margin: 0 auto; 
     
 }
 
