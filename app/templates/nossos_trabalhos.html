@@ -5,6 +5,19 @@
         <h1 class="titulo">Nossos Trabalhos</h1>
         <p class="subtitulo">Conheça abaixo alguns de nossos trabalhos</p>
     </section>
+    
+    <div class="banner">
+        <div class="texto-banner">
+            <p>O projeto ADA já atuou em diversas escolas por Natal, mudando e conscientizando a vida de diversas mulheres por onde passa.</p>
+        </div>
+        <div class="img-banner">
+            <img src="/static/img/7 2.png" alt="">
+        </div>
+    </div>
+    
+
+    <h1 class="titulo_materiaisAP">Materiais Apresentados</h1>
+
     <ul>
         {% for trabalho in trabalhos %}
         <li>
@@ -17,10 +30,5 @@
         </li>
         {% endfor %}
     </ul>
-    <section class="banner">
-        <p>O projeto ADA já atuou em diversas escolas por Natal, mudando e conscientizando a vida de diversas mulheres por onde passa.</p>
-        <img src="app/static/img/7 2" alt="">
-    </section>
     
-    <h1 class="titulo_materiaisAP">Materiais Apresentados</h1>
     {%endblock%}
