@@ -2,6 +2,7 @@
 
 {% block conteudo %}
 <section class="pag_rede_apoio">
+    
     <aside class="sidebar_rda">
         <div>
             <p>{{current_user.name}}</p>
@@ -18,8 +19,7 @@
                     <a class="nav-link" href="{{url_for('user.logoff')}}">Sair</a>
             </p>
         </ul>
-        </div>
-
+    </div>
     </aside>
 
     <section>
@@ -28,24 +28,24 @@
             <p class="subtitulo">Compartilhe sua experiência na área STEM e incentive outras mulheres.</p>
         </div>
 
-<div class="formrededeapoio">
-        <form action="{{ url_for('user.mensagens') }}" method="post">
-            <div>
-                <input class="textboxinput" type="text" id="mensagens" name="mensagens" placeholder="Fale conosco"><br>
-            </div>
-            <div>
-                <button class="botaorede" type="submit">Enviar</button>
-            </div>
-        </form>
-</div>
+        <div class="formrededeapoio">
+                <form action="{{ url_for('user.mensagens') }}" method="post">
+                    <div>
+                        <input class="textboxinput" type="text" id="mensagens" name="mensagens" placeholder="Fale conosco"><br>
+                    </div>
+                    <div>
+                        <button class="botaorede" type="submit">Enviar</button>
+                    </div>
+                </form>
+        </div>
 
-<ul>
-    {% for i in mensagens %}
-        <li class="card">
-            <p>{{ i.user.name if i.user and i.user.name else 'Usuário desconhecido' }}:</p>
-            <p>{{ i.mensagem }}</p>
-        </li>
-    {% endfor %}
-</ul>
-
+        <ul class="messagecard">
+            {% for i in mensagens %}
+                <li class="card">
+                    <p>{{ i.user.name if i.user and i.user.name else 'Usuário desconhecido' }}:</p>
+                    <p>{{ i.mensagem }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
 {% endblock %}
