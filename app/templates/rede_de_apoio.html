@@ -41,11 +41,13 @@
 
         <ul class="messagecard">
             {% for i in mensagens %}
-                <li class="card">
-                    <p>{{ i.user.name if i.user and i.user.name else 'Usuário desconhecido' }}:</p>
-                    <p>{{ i.mensagem }}</p>
+                <li class="cardrede">
+                    <div class="cardcontent">
+                        <div class="avatar"></div> <!-- Avatar aqui -->
+                        <h4 class="cardusername">{{ i.user.name if i.user and i.user.name else 'Usuário desconhecido' }}:</h4>
+                        <p class="cardusertext">{{ i.mensagem }}</p>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
-    </section>
 {% endblock %}
