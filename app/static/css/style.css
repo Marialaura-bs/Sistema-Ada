@@ -681,7 +681,7 @@ input {
     font-weight: bolder;
     font-size: 1.8rem;
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .subtitulo-outras {
@@ -700,7 +700,7 @@ input {
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .cards-outras {
@@ -710,6 +710,8 @@ input {
     padding: 1rem;
     border-radius: 0.5rem;
     color: #fff;
+    display: flex;
+    flex-direction: row;
 }
 
 .cards2-esquerda, .cards2-direita {
@@ -717,6 +719,25 @@ input {
     flex-direction: column;
     width: 50%;
     gap: 2rem; /* Espaço entre os cards */
+}
+
+.div-direita-outras img {
+    width: 50vw;
+    height: auto;
+    max-width: 134px;
+    max-height: 130px;
+}
+
+.div-direita-outras h2{
+    color: #FED6DF;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.div-direita-outras {
+    margin-right: 2rem;
 }
 
 /*REDE DE APOIO*/
