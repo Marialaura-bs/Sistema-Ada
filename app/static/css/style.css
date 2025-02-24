@@ -696,22 +696,27 @@ input {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 4rem;
     margin-top: 2rem;
 }
 
 .cards-outras {
-    display: flex;
-    flex-direction: column;
-    width: 60%; /* Diminui a largura do card */
+    width: 100%; /* Ocupa toda a largura do container pai */
     min-height: 150px;
     background-color: #222734;
     padding: 1rem;
     border-radius: 0.5rem;
     color: #fff;
+}
+
+.cards2-esquerda, .cards2-direita {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2rem; /* Espaço entre os cards */
 }
 
 /*REDE DE APOIO*/
