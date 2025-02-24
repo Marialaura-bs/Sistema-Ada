@@ -15,22 +15,24 @@
         </div>
     </div>
     
-
-    <div class="materiais-apresentados">
-        <h1 class="titulo_materiaisAP">Materiais Apresentados</h1>
     
-        <ul>
-            {% for trabalho in trabalhos %}
-            <li>
-                <h2>{{ trabalho.titulo }}</h2>
-                <p>{{ trabalho.descricao }}</p>
-                <img src="{{ url_for('static', filename=trabalho.imagem) }}" alt="{{ trabalho.titulo }}">
-                {% if trabalho.link %}
-                <p><a href="{{ trabalho.link }}" target="_blank">Veja o artigo submetido ao evento</a></p>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
+    <div class="container-materiais">
+        <div class="materiais-apresentados">
+            <h1 class="titulo_materiaisAP">Materiais Apresentados</h1>
+        
+            <ul>
+                {% for trabalho in trabalhos %}
+                <li>
+                    <h2>{{ trabalho.titulo }}</h2>
+                    <p>{{ trabalho.descricao }}</p>
+                    <img src="{{ url_for('static', filename=trabalho.imagem) }}" alt="{{ trabalho.titulo }}">
+                    {% if trabalho.link %}
+                    <p><a href="{{ trabalho.link }}" target="_blank">Veja o artigo submetido ao evento</a></p>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
     
     
