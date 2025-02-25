@@ -5,25 +5,30 @@
     
     <aside class="sidebar_rda">
         <div>
-            <form action="{{ url_for('user.delete_user') }}" method="post">
-                <button type="submit" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Deletar conta</button>
-            </form>
-        </div>
+            <div class="perfil_usuario">
+                <p class="nome_usuario">{{current_user.name}}</p>
+                <p class="cargo_usuario">Administrador</p>
+            </div>
 
-        <div class="infopessoais">
-            <p>{{current_user.email}}</p>
+            <div class="dados_pessoais">
+                <h3>Dados Pessoais</h3>
+                <p class="info_pessoal">{{ current_user.email }}</p>
+                <p class="info_pessoal">Mensagens enviadas: {{ current_user.message_count }}</p>
+                
+                {% if current_user.is_authenticated and current_user.is_admin %}
+                <a href="{{ url_for('form_adm') }}" class="botao_submeter">Submeter projeto</a>
+                {% endif %}
+            </div>
+            
+            <div class="botoes_sair_deletar">
+                <form action="{{ url_for('user.delete_user') }}" method="post">
+                    <button type="submit" class="botao_deletar" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">
+                        Deletar Conta
+                    </button>
+                </form>
+                <a class="nav-link" href="{{ url_for('user.logoff') }}">Sair da Conta</a>
+            </div>
         </div>
-
-        {% if current_user.is_authenticated and current_user.is_admin %}
-        <div>
-            <a href="{{ url_for('form_adm') }}">Adicione um novo trabalho</a>
-        </div>
-        {% endif %}
-        
-        <div class="sair_container">
-            <a class="nav-link" href="{{url_for('user.logoff')}}">Sair</a>
-        </div>
-    </div>
     </aside>
 
     <section>

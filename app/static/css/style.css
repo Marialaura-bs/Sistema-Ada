@@ -760,53 +760,117 @@ input {
 }
 
 .sidebar_rda{
-    width: 30vh; /* Largura da sidebar */
-    height: 100vh; /* Altura total da tela */
-    background-color: #2C2F3F; /* Cor de fundo escura */
+    width: 30vh;
+    height: 100vh;
+    background-color: #2C2F3F;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     font-family: Poppins;
 }
 
-.sidebar_rda h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 16px;
-    border-radius: 15px;
-    background: #FED6DF;
-    color: #343B4D;
-    font-size: 14px;
-    font-weight: 600;
+.perfil_usuario {
     text-align: center;
-    width: fit-content; /* Faz com que o tamanho se ajuste ao conteúdo */
     margin-bottom: 10px;
 }
 
-.infopessoais {
+.nome_usuario {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cargo_usuario {
+    font-size: 14px;
+    color: #FED6DF;
+    font-style: italic;
+}
+
+.dados_pessoais {
     text-align: center;
     color: white;
     font-size: 14px;
     margin-bottom: 20px;
 }
 
-/* Botão "Sair" */
-.nav-link {
+.dados_pessoais h3 {
+    background: #FED6DF;
+    color: #343B4D;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info_pessoal {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.botao_submeter {
     display: inline-block;
-    background-color: #FED6DF; /* Cor de fundo */
-    color: #343B4D; /* Cor do texto */
+    background-color: #FED6DF;
+    color: #343B4D;
     font-weight: bold;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 20px; /* Borda arredondada */
+    border-radius: 20px;
+    margin-top: 10px;
     transition: background 0.3s ease, color 0.3s ease;
 }
+
+.botao_submeter:hover {
+    background-color: #F2AEBB;
+}
+
+.botoes_sair_deletar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 200%;
+}
+
+.botao_deletar {
+    background-color: #B50000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.botao_deletar:hover {
+    background-color: darkred;
+}
+
+.nav-link {
+    display: inline-block;
+    background-color: #FED6DF;
+    color: #343B4D;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
 .nav-link:hover {
-    background-color: #F2AEBB; /* Cor mais escura ao passar o mouse */
-    color: rgb(0, 0, 0);
+    background-color: #F2AEBB;
+    color: black;
 }
 
 /* Estilização das mensagens */
