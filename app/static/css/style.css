@@ -505,7 +505,7 @@ input {
 }
 
 .card_dp h4{
-    margin: 1vw 0 0.5vw 0;
+    margin: 2vw 0 0.5vw 0;
     margin-left: 3%;
     color: #FFF;
     font-family: Inter;
@@ -526,6 +526,53 @@ input {
 
 .card_dp:last-of-type {
     margin-bottom: 90px; 
+}
+
+.container-geral-sobre-o-ada{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container_sobre_o_ada{
+    background: #343B4D;
+    padding: 2rem;
+    width: 100%;
+    height: 60vh;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #FED6DF;
+}
+
+.container_sobre_o_ada h2{
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: bolder;
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    width: 100%;
+    max-width: 1200px; /* Mesma largura do conteúdo principal */
+    margin: 0 auto;
+    
+}
+
+.container_sobre_o_ada p{
+    width: 80vh;
+    font-family: Poppins;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    margin-top: 3rem;
+}
+
+.textos_sobre_o_ada{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-top: 2rem;
 }
 
 /*NOSSOS_TRABALHOS.HTML*/
@@ -601,6 +648,7 @@ input {
 }
 
 /*LOVELACE*/
+
 .container-ada{
     display: flex;
     align-items: center;
@@ -662,7 +710,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 1rem; /* Ajusta a distância do topo */
+    margin-top: 1rem;
 }
 
 .container-outrasmulheres {
@@ -682,7 +730,7 @@ input {
     font-weight: bolder;
     font-size: 1.8rem;
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .subtitulo-outras {
@@ -697,49 +745,64 @@ input {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap; 
     justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    margin-top: 5rem;
+    gap: 2.5rem;
+    margin-top: 3rem;
 }
 
+
 .cards-outras {
-    width: 100%; /* Ocupa toda a largura do container pai */
-    min-height: 150px;
+    width: 22%;
+    min-width: 250px;
+    height: 40vh;
     background-color: #222734;
     padding: 1rem;
     border-radius: 0.5rem;
     color: #fff;
     display: flex;
-    flex-direction: row;
-}
-
-.cards2-esquerda, .cards2-direita {
-    display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 2rem; /* Espaço entre os cards */
-}
-
-.div-direita-outras img {
-    width: 50vw;
-    height: auto;
-    max-width: 134px;
-    max-height: 130px;
-}
-
-.div-direita-outras h2{
-    color: #FED6DF;
-    font-family: Poppins;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    text-align: center;
+    flex: 1 1 22%;
+    max-width: 280px;
+    border: 1px solid #FED6DF;
 }
 
 .div-direita-outras {
-    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.div-direita-outras img {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+.div-direita-outras h2 {
+    color: #FED6DF;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-top: 2rem;
+
+}
+
+.div-esquerda-outras p {
+    font-family: Poppins;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+
+
+
 
 /*REDE DE APOIO*/
 
