@@ -620,31 +620,110 @@ input {
 .materiais-apresentados {
     background: #343B4D;
     padding: 2rem;
-    width: 100%;
-    height: 60vh;
+    height: auto;
     margin-top: 5rem;
     margin-bottom: 7rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Estrutura principal em coluna */
     align-items: center;
+    position: relative;
+}
+
+.titulo-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.8rem;
 }
 
 .titulo_materiaisAP {
     color: #FFFFFF;
-    text-align: center;
     font-family: "Poppins";
-    font-weight: bolder;
-    font-size: 1.8rem;
-    padding-top: 2rem;
-    width: 100%;
-    max-width: 1200px; /* Mesma largura do conteúdo principal */
-    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #FED6DF;
 }
 
-.container-materiais {
+.container-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    font-family: "Poppins";
+}
+
+.cardnt {
+    background: #474F62;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardnt h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #FED6DF;
+    font-weight: 600;
+}
+
+.cardnt p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.cardnt a {
+    color: #4695f7;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    transition: background 0.1s;
+}
+
+.cardnt button {
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.cardnt button:hover {
+    background: #cc0000;
+}
+
+.cardnt a:hover{
+    color: #0070FC;
+}
+
+/* Ajuste das setas de navegação */
+.navegacao {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Alinha as setas à direita */
+    margin-top: 3rem;
+    padding-right: 2rem;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.seta {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.seta:hover {
+    transform: scale(1.1);
 }
 
 /*LOVELACE*/
@@ -1047,3 +1126,90 @@ input {
 
  /*DADOS*/
  
+
+ /*FORMULARIO ADM*/
+
+
+ .conteinerform_adm {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.adm_form {
+    border-radius: calc(1% + 1.5em);
+    background-color: #343B4C;
+    box-shadow: lightgray; /* Sombra para dar profundidade */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28vw;
+    height: 33vw;
+    max-width: 1920px;
+}
+
+.conteiner_inputs_adm label{
+    margin-bottom: 6px;
+}
+
+.adm_titulo_form {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
+    padding-top: 1rem;
+    border-bottom: 3px solid #FED6DF; 
+    text-align: center;
+    padding-bottom: 1rem; 
+    width: 80%; 
+}
+
+.conteiner_inputs_adm {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    display: flex;
+    padding-top: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 18px; 
+}
+
+input {
+    width: 18vw; 
+    padding: 10px; 
+    border-radius: 8px;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    margin-bottom: 25px;
+    background-color: #fbfbfd; /* Fundo do input */
+    color: #000000; /* Cor do texto */
+    font-size: 16px;
+}
+
+.conteiner_inputs_adm input{
+    margin-bottom: 10px;
+}
+
+.adm_botao {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    height: 3vw;
+    width: 16vw;
+    background-color: #FED6DF;
+    color: #404758;
+    border: none; 
+    margin-top: 2rem;
+    padding: 10px 0; 
+    text-align: center;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Adicionada animação ao botão */
+}
+
+.adm_botao:hover {
+    background-color: #ffb6c1; /* Cor ao passar o mouse */
+    transform: scale(1.12); /* Efeito de clique */
+}

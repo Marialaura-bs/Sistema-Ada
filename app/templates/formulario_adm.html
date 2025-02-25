@@ -7,14 +7,28 @@
     </section>
 
     <section>
-        <form action="{{url_for('user.upload_trabalho')}}" method="POST" enctype="multipart/form-data">
-            <label for="">Adicione um título aqui:</label>
-            <input placeholder="Título" type="text" name="titulo"><br/>
-            <label for="">Adicione uma descrição aqui:</label>
-            <input placeholder="Descrição" type="text" name="descricao"><br/>
-            <label for="link">Insira um link:</label>
-            <input type="url" name="link" id="link" placeholder="https://exemplo.com">
-            <button type="submit">Enviar</button>
-        </form>
+        <div class='conteinerform_adm'>
+            <form class="adm_form" action="{{url_for('user.upload_trabalho')}}" method="POST" enctype="multipart/form-data">
+                <h1 class="adm_titulo_form">Envie um trabalho</h1>
+        
+                <div class="conteiner_inputs_adm">
+                    <label for="">Adicione um título aqui:</label>
+                    <input placeholder="Título" type="text" name="titulo"><br/>
+        
+                    <label for="">Adicione uma descrição aqui:</label>
+                    <input placeholder="Descrição" type="text" name="descricao"><br/>
+                    
+                    <label for="link">Insira um link:</label>
+                    <input type="url" name="link" id="link" placeholder="https://exemplo.com">
+                </div>
+                <div>
+                    <button class="adm_botao" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+
     </section>
+
+
+    
     {%endblock%}
