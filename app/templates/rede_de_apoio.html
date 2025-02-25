@@ -51,6 +51,12 @@
                             <div class="avatar"></div> <!-- Avatar aqui -->
                             <h4 class="cardusername">{{ i.user.name if i.user and i.user.name else 'Usuário desconhecido' }}:</h4>
                             <p class="cardusertext">{{ i.mensagem }}</p>
+                            {% if i.user_id == current_user.id %}
+                            <!-- Formulário para excluir mensagem -->
+                                <form action="{{ url_for('user.delete_mensagem', mensagem_id=i.id) }}" method="post">
+                                    <button type="submit" onclick="return confirm('Tem certeza que deseja excluir esta mensagem?')">Excluir</button>
+                                </form>
+                            {% endif %}
                         </div>
                     </li>
                 {% endfor %}
