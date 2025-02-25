@@ -601,6 +601,7 @@ input {
 }
 
 /*LOVELACE*/
+
 .container-ada{
     display: flex;
     align-items: center;
@@ -662,7 +663,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 1rem; /* Ajusta a distância do topo */
+    margin-top: 1rem;
 }
 
 .container-outrasmulheres {
@@ -697,49 +698,64 @@ input {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap; 
     justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    margin-top: 5rem;
+    gap: 2.5rem;
+    margin-top: 3rem;
 }
 
+
 .cards-outras {
-    width: 100%; /* Ocupa toda a largura do container pai */
-    min-height: 150px;
+    width: 22%;
+    min-width: 250px;
+    height: 40vh;
     background-color: #222734;
     padding: 1rem;
     border-radius: 0.5rem;
     color: #fff;
     display: flex;
-    flex-direction: row;
-}
-
-.cards2-esquerda, .cards2-direita {
-    display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 2rem; /* Espaço entre os cards */
-}
-
-.div-direita-outras img {
-    width: 50vw;
-    height: auto;
-    max-width: 134px;
-    max-height: 130px;
-}
-
-.div-direita-outras h2{
-    color: #FED6DF;
-    font-family: Poppins;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    text-align: center;
+    flex: 1 1 22%;
+    max-width: 280px;
+    border: 1px solid #FED6DF;
 }
 
 .div-direita-outras {
-    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.div-direita-outras img {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+.div-direita-outras h2 {
+    color: #FED6DF;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-top: 2rem;
+
+}
+
+.div-esquerda-outras p {
+    font-family: Poppins;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+
+
+
 
 /*REDE DE APOIO*/
 
