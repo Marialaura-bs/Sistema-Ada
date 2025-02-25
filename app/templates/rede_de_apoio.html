@@ -7,7 +7,9 @@
         <div>
             <div class="perfil_usuario">
                 <p class="nome_usuario">{{current_user.name}}</p>
-                <p class="cargo_usuario">Administrador</p>
+                {% if current_user.is_admin %}
+                    <p class="cargo_usuario">Administrador</p>
+                {% endif %}
             </div>
 
             <div class="dados_pessoais">
@@ -67,19 +69,5 @@
                 {% endfor %}
             </ul>
         </div>
-        <ul class="messagecard">
-            {% for i in mensagens %}
-                <li class="card">
-                    <p>{{ i.user.name if i.user and i.user.name else 'Usuário desconhecido' }}:</p>
-                    <p>{{ i.mensagem }}</p>
-                    {% if i.user_id == current_user.id %}
-                    <!-- Formulário para excluir mensagem -->
-                        <form action="{{ url_for('user.delete_mensagem', mensagem_id=i.id) }}" method="post">
-                            <button type="submit" onclick="return confirm('Tem certeza que deseja excluir esta mensagem?')">Excluir</button>
-                        </form>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
     </section>
 {% endblock %}
