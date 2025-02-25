@@ -147,6 +147,7 @@ footer {
     background-color: #343B4D; /* Cor de fundo do footer */
     border-top: 0.15vw solid #FED6DF;
     padding: 0.5vw;
+    
 }
 
 .footer-container {
@@ -850,6 +851,15 @@ input {
     
 }
 
+.containerrda {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .messagecard {
     list-style: none;
     padding: 0;
@@ -858,6 +868,13 @@ input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.messagecard::-webkit-scrollbar {
+    display: none;
 }
 
 .cardrede {
