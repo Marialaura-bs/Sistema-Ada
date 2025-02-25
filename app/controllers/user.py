@@ -28,6 +28,18 @@ def upload_trabalho():
     db.session.commit()
     return redirect(url_for('user.nossos_trabalhos'))
 
+@user_bp.route('/trabalho/<int:trabalho_id>/delete', methods=['POST'])
+@login_required
+def delete_trabalho(trabalho_id):
+    trabalho = Trabalho.query.get_or_404(trabalho_id)
+    
+    # Verifica se o usuário é um administrador
+    if current_user.is_admin:
+        db.session.delete(trabalho)
+        db.session.commit()
+    
+    return redirect(url_for('user.nossos_trabalhos'))
+
 @user_bp.route('/nossos_trabalhos')
 def nossos_trabalhos():
     trabalhos = Trabalho.query.all() 
