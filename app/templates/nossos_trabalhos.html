@@ -25,9 +25,8 @@
                 <li>
                     <h2>{{ trabalho.titulo }}</h2>
                     <p>{{ trabalho.descricao }}</p>
-                    <img src="{{ url_for('static', filename=trabalho.imagem) }}" alt="{{ trabalho.titulo }}">
                     {% if trabalho.link %}
-                    <p><a href="{{ trabalho.link }}" target="_blank">Veja o artigo submetido ao evento</a></p>
+                    <p><a href="{{ trabalho.link }}" target="_blank">Veja mais informações sobre nossa participação no evento</a></p>
                     {% endif %}
                 </li>
                 {% endfor %}

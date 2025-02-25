@@ -18,40 +18,14 @@ def upload_trabalho():
     titulo = request.form.get('titulo')
     descricao = request.form.get('descricao')
     link = request.form.get('link')  # Pode ser None
-
-    # Verifica se o arquivo foi enviado
-    if 'file' not in request.files:
-        return "Nenhuma imagem enviada", 400
-
-    file = request.files['file']
-
-    if file.filename == '':
-        return "Nenhuma imagem selecionada", 400
-
-    # Garante que a pasta de upload existe
-    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-
-    # Garante um nome seguro para o arquivo (remove espaços e caracteres inseguros)
-    filename = secure_filename(file.filename).replace(" ", "_")
-
-    # Caminho completo para salvar a imagem
-    caminho_imagem = os.path.join(UPLOAD_FOLDER, filename)
-    file.save(caminho_imagem)
-
-    # Salva apenas o caminho relativo ao `static/`
-    caminho_imagem_relativo = os.path.join('uploads', filename)  # 'uploads/nome_do_arquivo.jpg'
-
     # Salva os dados no banco de dados
     novo_trabalho = Trabalho(
         titulo=titulo,
         descricao=descricao,
-        imagem=caminho_imagem_relativo,  # Apenas o caminho relativo
         link=link
     )
-
     db.session.add(novo_trabalho)
     db.session.commit()
-
     return redirect(url_for('user.nossos_trabalhos'))
 
 @user_bp.route('/nossos_trabalhos')

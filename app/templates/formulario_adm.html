@@ -10,16 +10,10 @@
         <form action="{{url_for('user.upload_trabalho')}}" method="POST" enctype="multipart/form-data">
             <label for="">Adicione um título aqui:</label>
             <input placeholder="Título" type="text" name="titulo"><br/>
-
-            <label for="file">Adicione uma imagem:</label>
-            <input type="file" name="file" id="file" accept="image/*" required>
-
             <label for="">Adicione uma descrição aqui:</label>
             <input placeholder="Descrição" type="text" name="descricao"><br/>
-
-            <label for="link">Insira um link (opcional):</label>
+            <label for="link">Insira um link:</label>
             <input type="url" name="link" id="link" placeholder="https://exemplo.com">
-
             <button type="submit">Enviar</button>
         </form>
     </section>
