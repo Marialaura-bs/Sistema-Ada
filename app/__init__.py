@@ -5,7 +5,6 @@ from flask_migrate import Migrate
 from app.models.usuario import User
 from flask_login import login_required, current_user
 from app.controllers.user import user_bp
-from app.controllers.home import home_bp
 import os
 
 def create_app():
@@ -23,7 +22,6 @@ def create_app():
     migrate.init_app(app, db)
 
     app.register_blueprint(user_bp, url_prefix='/user')
-    app.register_blueprint(home_bp)
 
     @lm.user_loader
     def load_user(id):

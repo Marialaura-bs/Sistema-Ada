@@ -18,40 +18,14 @@ def upload_trabalho():
     titulo = request.form.get('titulo')
     descricao = request.form.get('descricao')
     link = request.form.get('link')  # Pode ser None
-
-    # Verifica se o arquivo foi enviado
-    if 'file' not in request.files:
-        return "Nenhuma imagem enviada", 400
-
-    file = request.files['file']
-
-    if file.filename == '':
-        return "Nenhuma imagem selecionada", 400
-
-    # Garante que a pasta de upload existe
-    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-
-    # Garante um nome seguro para o arquivo (remove espaços e caracteres inseguros)
-    filename = secure_filename(file.filename).replace(" ", "_")
-
-    # Caminho completo para salvar a imagem
-    caminho_imagem = os.path.join(UPLOAD_FOLDER, filename)
-    file.save(caminho_imagem)
-
-    # Salva apenas o caminho relativo ao `static/`
-    caminho_imagem_relativo = os.path.join('uploads', filename)  # 'uploads/nome_do_arquivo.jpg'
-
     # Salva os dados no banco de dados
     novo_trabalho = Trabalho(
         titulo=titulo,
         descricao=descricao,
-        imagem=caminho_imagem_relativo,  # Apenas o caminho relativo
         link=link
     )
-
     db.session.add(novo_trabalho)
     db.session.commit()
-
     return redirect(url_for('user.nossos_trabalhos'))
 
 @user_bp.route('/nossos_trabalhos')
@@ -105,6 +79,21 @@ def logoff():
 	logout_user()
 	return redirect('/')
 
+@user_bp.route('/delete_user', methods=['POST'])
+@login_required
+def delete_user():
+    user_to_delete = User.query.get(current_user.id)  # Pega o usuário logado, ou use outro ID se for admin
+
+    if user_to_delete:
+        try:
+            db.session.delete(user_to_delete)  # Remove o usuário
+            db.session.commit()  # Salva as mudanças no banco de dados
+            flash('Usuário deletado com sucesso!', 'success')
+        except Exception as e:
+            db.session.rollback()
+            flash(f'Ocorreu um erro ao tentar deletar o usuário: {str(e)}', 'error')
+
+    return redirect(url_for('user.logoff'))  
 
 @user_bp.route('/rede_apoio')
 @login_required

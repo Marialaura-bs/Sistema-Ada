@@ -4,21 +4,21 @@
 <section class="pag_rede_apoio">
     
     <aside class="sidebar_rda">
-        <div class="perfil_usuario">
-            <img src="/app/static/img/fotolaura.png" alt="Foto do Usuário" class="foto_usuario">
-            <p class="nome_usuario">{{current_user.name}}</p>
-            <p class="cargo_usuario">Administrador</p>
+        <div>
+            <form action="{{ url_for('user.delete_user') }}" method="post">
+                <button type="submit" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Deletar conta</button>
+            </form>
         </div>
 
-        <div class="dados_pessoais">
-            <h3>Dados Pessoais</h3>
-            <p>Email: {{current_user.email}}</p>
-            <p>Mensagens enviadas: {{current_user.message_count}}</p>
+        <div class="infopessoais">
+            <p>{{current_user.email}}</p>
         </div>
         
+        {% if current_user.is_authenticated and current_user.is_admin %}
         <div>
-            <a href="{{url_for('form_adm')}}">Adicione um novo trabalho</a>
+            <a href="{{ url_for('form_adm') }}">Adicione um novo trabalho</a>
         </div>
+        {% endif %}
         
         <div class="sair_container">
             <a class="nav-link" href="{{url_for('user.logoff')}}">Sair</a>
