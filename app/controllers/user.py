@@ -79,6 +79,21 @@ def logoff():
 	logout_user()
 	return redirect('/')
 
+@user_bp.route('/delete_user', methods=['POST'])
+@login_required
+def delete_user():
+    user_to_delete = User.query.get(current_user.id)  # Pega o usuário logado, ou use outro ID se for admin
+
+    if user_to_delete:
+        try:
+            db.session.delete(user_to_delete)  # Remove o usuário
+            db.session.commit()  # Salva as mudanças no banco de dados
+            flash('Usuário deletado com sucesso!', 'success')
+        except Exception as e:
+            db.session.rollback()
+            flash(f'Ocorreu um erro ao tentar deletar o usuário: {str(e)}', 'error')
+
+    return redirect(url_for('user.logoff'))  
 
 @user_bp.route('/rede_apoio')
 @login_required
