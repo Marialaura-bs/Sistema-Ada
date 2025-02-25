@@ -19,16 +19,21 @@
     <div class="container-materiais">
         <div class="materiais-apresentados">
             <h1 class="titulo_materiaisAP">Materiais Apresentados</h1>
-        
             <ul>
                 {% for trabalho in trabalhos %}
-                <li>
-                    <h2>{{ trabalho.titulo }}</h2>
-                    <p>{{ trabalho.descricao }}</p>
-                    {% if trabalho.link %}
-                    <p><a href="{{ trabalho.link }}" target="_blank">Veja mais informações sobre nossa participação no evento</a></p>
-                    {% endif %}
-                </li>
+                    <li>
+                        <h2>{{ trabalho.titulo }}</h2>
+                        <p>{{ trabalho.descricao }}</p>
+                        {% if trabalho.link %}
+                            <p><a href="{{ trabalho.link }}" target="_blank">Veja mais informações sobre nossa participação no evento</a></p>
+                        {% endif %}
+                        {% if current_user.is_admin %}
+                            <!-- Formulário para excluir trabalho (somente para administradores) -->
+                            <form action="{{ url_for('user.delete_trabalho', trabalho_id=trabalho.id) }}" method="post">
+                                <button type="submit" onclick="return confirm('Tem certeza que deseja excluir este trabalho?')">Excluir</button>
+                            </form>
+                        {% endif %}
+                    </li>
                 {% endfor %}
             </ul>
         </div>
