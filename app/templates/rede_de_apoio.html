@@ -13,7 +13,7 @@
         <div class="infopessoais">
             <p>{{current_user.email}}</p>
         </div>
-        
+
         {% if current_user.is_authenticated and current_user.is_admin %}
         <div>
             <a href="{{ url_for('form_adm') }}">Adicione um novo trabalho</a>
@@ -62,5 +62,19 @@
                 {% endfor %}
             </ul>
         </div>
-
+        <ul class="messagecard">
+            {% for i in mensagens %}
+                <li class="card">
+                    <p>{{ i.user.name if i.user and i.user.name else 'Usuário desconhecido' }}:</p>
+                    <p>{{ i.mensagem }}</p>
+                    {% if i.user_id == current_user.id %}
+                    <!-- Formulário para excluir mensagem -->
+                        <form action="{{ url_for('user.delete_mensagem', mensagem_id=i.id) }}" method="post">
+                            <button type="submit" onclick="return confirm('Tem certeza que deseja excluir esta mensagem?')">Excluir</button>
+                        </form>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
 {% endblock %}
