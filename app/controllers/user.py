@@ -110,4 +110,22 @@ def mensagens():
         db.session.add(nova_mensagem)
         db.session.commit()
     return redirect(url_for('user.rede_apoio'))
+
+@user_bp.route('/mensagem/<int:mensagem_id>/delete', methods=['POST'])
+@login_required
+def delete_mensagem(mensagem_id):
+    mensagem = Mensagens.query.get(mensagem_id)  # Encontra a mensagem pelo ID
+
+    # Verifica se a mensagem existe e se o usuário logado é o proprietário
+    if mensagem and mensagem.user_id == current_user.id:
+        try:
+            db.session.delete(mensagem)  # Apaga a mensagem
+            db.session.commit()  # Confirma as alterações no banco
+        except Exception as e:
+            db.session.rollback()
+            flash(f'Ocorreu um erro ao tentar excluir a mensagem: {str(e)}', 'error')
+    else:
+        flash('Você não tem permissão para excluir esta mensagem.', 'error')
+
+    return redirect(url_for('user.rede_apoio')) 
     
